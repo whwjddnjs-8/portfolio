@@ -1,0 +1,71 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    font-weight: 300;
+    background-color: #fff;
+    color: #222;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* 부모요소 */
+.gnb a {
+    /*    border: 1px solid green;*/
+    width: 300px;
+    display: block;
+    height: 40px;
+    position: relative;
+    
+    overflow: hidden;
+}
+
+.gnb a:before,
+.gnb a:after {
+    content: attr(data-text);
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.gnb a:before {
+    background-color: crimson;
+    top: 0;
+}
+
+.gnb a:after {
+    background-color: royalblue;
+    top: 100%;
+}
+
+.gnb a:hover:before {
+    top: -100%;
+}
+.gnb a:hover:after {
+    top: 0;
+}

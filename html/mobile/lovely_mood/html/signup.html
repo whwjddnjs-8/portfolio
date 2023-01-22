@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Lovely Mood</title>
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- Slick Slider -->
+	<script src="../js/slick/slick.js"></script>
+	<link rel="stylesheet" href="../js/slick/slick-theme.css">
+	<link rel="stylesheet" href="../js/slick/slick.css">
+	<!-- Custom CSS & JS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/custom.js"></script>
+</head>
+
+
+<body>
+	<div class="container signup">
+		<div class="signup-inner">
+			<div class="sub-header-with-title">
+				<button class="btn-back" onclick="history.back()"><i class="bi bi-chevron-left"></i></button>
+				<h2 class="logo sub-header-title">Join Us</h2>
+				<button class="btn-home" onclick="location.href='../html/home.html'"><i class="bi bi-house"></i></button>
+			</div>
+			<div class="signup-content">
+				<div class="signup-field">
+					<span>아이디</span><em>*</em>
+					<div class="id-field">
+						<input type="text" placeholder="아이디">
+						<button class="btn-double-check">중복확인</button>
+					</div>
+					<p class="alert-message">사용가능한 아이디입니다.</p>
+				</div>
+				<div class="signup-field">
+					<span>비밀번호</span><em>*</em>
+					<input type="password" placeholder="비밀번호">
+				</div>
+				<div class="signup-field">
+					<span>비밀번호 확인</span><em>*</em>
+					<input type="password" placeholder="비밀번호 확인">
+				</div>
+				<div class="signup-field">
+					<span>이름</span><em>*</em>
+					<input type="text" placeholder="이름">
+				</div>
+				<div class="signup-field">
+					<span>전화번호</span><em>*</em>
+					<div class="telnumber-field">
+						<div class="custom-select">
+							<select>
+								<option value="">010</option>
+								<option value="">011</option>
+								<option value="">02</option>
+							</select>
+						</div>
+						<div class="tel-input">
+							<input type="text">
+						</div>
+						<div class="tel-input">
+							<input type="text">
+						</div>
+					</div>
+				</div>
+				<div class="signup-field">
+					<span>이메일</span><em>*</em>
+					<input type="email" placeholder="이메일">
+				</div>
+				<div class="signup-field">
+					<span>생년월일</span><em>*</em>
+					<div class="birth-field">
+						<input type="text" placeholder="년도(4자)">
+						<div class="custom-select">
+							<select>
+								<option value="">월</option>
+							</select>
+						</div>
+						<div class="custom-select">
+							<select>
+								<option value="">일</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<button class="btn-primary btn-sign-up">가입하기</button>
+			</div>
+			<!-- Include GNB -->
+			<div class="gnb-area"></div>
+			<!-- Include GNB -->
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+/* #### Common CSS #### */
+.container {
+	position: relative;
+}
+
+.signup,
+.home,
+.product-like,
+.mypage,
+.cart,
+.notification,
+.search {
+	margin-bottom: 70px;
+}
+
+
+/* Logo CSS */
+h2.logo {
+	font-family: var(--primary-en);
+	font-size: 23px;
+	font-weight: 400;
+	color: var(--dark-brown);
+}
+
+
+/* Custom Select */
+.custom-select {
+	width: 70px;
+	height: 40px;
+	border: 1px solid var(--dark-gray);
+	background-color: var(--snow);
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.custom-select:after {
+	position: absolute;
+	content: '\F282';
+	font-family: bootstrap-icons;
+	right: 8px;
+	font-size: 11px;
+	top: 10px;
+	padding-left: 8px;
+	pointer-events: none;
+}
+
+.custom-select select {
+	appearance: none;
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	padding-left: 16px;
+}
+
+/* Button CSS */
+.btn-primary {
+	display: block;
+	width: 90%;
+	margin: auto;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	color: var(--light-black);
+	font-weight: normal;
+}
+
+.btn-text-primary {
+	border: none;
+	background-color: transparent;
+	text-decoration: underline;
+	color: var(--dark-gray);
+}
+
+/* Badge CSS */
+.badge {
+	display: flex;
+	gap: 4px;
+}
+
+.badge span {
+	font-size: 6px;
+	background-color: var(--light-beige);
+	/* padding: 0 6px; */
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	width: 50px;
+	height: 17px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.badge span:nth-child(1) {
+	background-color: var(--semi-hot-pink);
+}
+
+.badge span:nth-child(2) {
+	background-color: var(--skyblue);
+}
+
+/* Header Title CSS */
+.header-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-title h3 {
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.header-title span {
+	font-size: 14px;
+	color: var(--dark-gray);
+}
+
+/* Product Item title & desc CSS */
+.product-item .thum {
+	width: 90px;
+	height: 90px;
+	position: relative;
+}
+
+.product-item .thum .product-like {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+.product-item .thum .product-like:after {
+	position: absolute;
+	content: '\F417';
+	font-family: bootstrap-icons;
+	font-size: 18px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--dark-gray);
+}
+
+.product-item .thum .product-like.active:after {
+	position: absolute;
+	content: '\F415';
+	font-family: bootstrap-icons;
+	font-size: 18px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--crimson);
+}
+
+.product-item .thum img {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.product-item .desc {
+	width: 90px;
+}
+
+.product-item b {
+	font-size: 14px;
+	display: inline-block;
+	padding: 3px 0;
+}
+
+.product-item span {
+	display: block;
+	font-size: 10px;
+	line-height: 1.2em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* Alert MSG CSS */
+.alert-message {
+	color: var(--crimson);
+	margin: 5px 0;
+	font-weight: normal;
+	font-size: 11px;
+}
+
+/* Sub Header CSS*/
+.sub-header-with-title,
+.main-header {
+	width: 100%;
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--light-beige);
+}
+
+h2.sub-header-title {
+	font-size: 23px;
+	font-weight: 400;
+	color: var(--dark-brown);
+}
+
+.sub-header-with-title button,
+.main-header button {
+	border: none;
+	background-color: transparent;
+	font-size: 26px;
+	margin: 10px;
+}
+
+/* Main Header CSS */
+.header-notice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.header-notice button {
+	margin: 0;
+}
+
+.header-cart {
+	margin-bottom: 4px;
+	position: relative;
+}
+
+.header-cart em {
+	position: absolute;
+	font-style: normal;
+	right: 0;
+	top: 5px;
+	background-color: var(--pink);
+	border-radius: 50%;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/* GNB CSS */
+.category .gnb a:nth-child(1),
+.search .gnb a:nth-child(2),
+.home .gnb a:nth-child(3),
+.product-like .gnb a:nth-child(4),
+.mypage .gnb a:nth-child(5) {
+	color: var(--light-brown);
+}
+
+.gnb {
+	width: 100%;
+	height: 65px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--silver-gray);
+	color: var(--dark-gray);
+}
+
+.gnb a {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.gnb a .bi {
+	font-size: 24px;
+}
+
+.gnb a:nth-child(2) .bi {
+	font-size: 22px;
+}
+
+.gnb a:nth-child(4) .bi {
+	font-size: 21px;
+}
+
+.gnb a span {
+	display: block;
+	font-size: 12px;
+}

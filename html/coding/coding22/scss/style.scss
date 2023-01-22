@@ -1,0 +1,75 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+    font-family: 'Raleway',
+        sans-serif;
+    ;
+    box-sizing: border-box;
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+    margin: 0;
+    color: #333;
+    background-color: #000;
+    line-height: 1.6em;
+}
+
+.faq {
+    color: #fff;
+
+    &-inner {
+        width: 900px;
+        margin: auto;
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+    }
+
+    &-title {
+        background-color: #333;
+        padding: 10px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: #fff;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.3s;
+        }
+
+        &:before {
+            width: 20px;
+            height: 2px;
+            right: 20px;
+        }
+
+        &:after {
+            width: 2px;
+            height: 20px;
+            right: 29px;
+        }
+    }
+
+    &-title.active:after {
+        opacity: 0;
+    }
+
+    &-content {
+        padding: 10px;
+        display: none;
+    }
+}

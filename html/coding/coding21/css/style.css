@@ -1,0 +1,73 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*align-items: center;
+  height: 100vh; */
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Only CSS Accordion Navigation */
+.items {
+  width: 250px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #535c68;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.items .close-item {
+  background-color: crimson;
+  text-align: center;
+}
+.items .main-item > a {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.115);
+}
+.items .main-item > a:after {
+  position: absolute;
+  content: "\f107";
+  font-family: fontawesome;
+  right: 10px;
+}
+.items li a {
+  color: #fff;
+  text-transform: capitalize;
+  padding: 10px;
+  display: block;
+}
+.items .sub-items {
+  background-color: #626e7e;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+.items .sub-items:target {
+  max-height: 300px;
+}
+.items .sub-items a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.115);
+}
+.items .sub-items a:last-child {
+  border: none;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>쇼핑몰 아이템</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="item">
+        <img src="images/item.jpg">
+        <div class="detail">
+            <div class="title">
+                <div class="brand-price">
+                    <em>트래블</em>
+                    <span>49,900원</span>
+                </div>
+                <h2> 하이커 섀도우 피그먼트 후드티 블루 섀도우</h2>
+            </div>
+            <div class="info">
+                <div class="size">
+                    <label>Size</label>
+                    <span>XS</span>
+                    <span>S</span>
+                    <span>M</span>
+                    <span>L</span>
+                    <span>XL</span>
+                </div>
+                <div class="color">
+                    <label>Colors</label>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span class="like"></span>
+            </div>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        $('.size span').click(function () {
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+        })
+
+        $('.color span').click(function () {
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+        })
+
+        $('.like').click(function () {
+            $(this).toggleClass('active');
+        })
+    </script>
+</body>
+
+</html>

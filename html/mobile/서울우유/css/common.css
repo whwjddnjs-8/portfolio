@@ -1,0 +1,642 @@
+.container {
+	/* width: 375px; */
+	position: relative;
+}
+
+[class*=content] {
+	margin-top: 65px;
+}
+
+/* #### Flex Grid CSS #### */
+.flex-space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* #### Ellipsis CSS #### */
+.ellipsis-line-1 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.ellipsis-line-2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.ellipsis-line-3 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/* #### Main Header CSS #### */
+.main-header {
+	height: 65px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	padding: 0 10px;
+	box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+	z-index: 1001;
+}
+
+.main-header .logo {
+	width: 120px;
+	height: 65px;
+}
+
+.main-header .logo img {
+	width: inherit;
+	height: inherit;
+	object-fit: contain;
+}
+
+/* #### GNB CSS #### */
+.gnb {
+	height: 65px;
+	background-color: #fff;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid var(--silver-gray);
+}
+
+.gnb a {
+	text-align: center;
+	display: inline-block;
+	height: inherit;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	color: var(--light-black);
+}
+
+.gnb-cart {
+	position: relative;
+}
+
+.gnb-cart em {
+	font-style: normal;
+	position: absolute;
+	border-radius: 50%;
+	background-color: var(--red);
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	color: #fff;
+	top: -2px;
+	right: -4px;
+}
+
+.gnb-cart em:after {
+	content: attr(data-count);
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	display: inline-block;
+	font-size: 7px;
+	transform: translate(-50%, -50%);
+}
+
+/* GNB 해당 페이지에서의 color 변경 */
+.main-menu .gnb a:nth-child(1),
+.mypage .gnb a:nth-child(2),
+.home .gnb a:nth-child(3),
+.product-like .gnb a:nth-child(4),
+.cart .gnb a:nth-child(5) {
+	color: var(--light-green);
+}
+
+/* #### Home Footer CSS #### */
+.home-footer {
+	background: #F2F2F2;
+	padding: 20px 10px;
+}
+
+.home-footer .logo-sns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.home-footer .logo-sns .sns {
+	display: flex;
+	gap: 5px;
+}
+
+.footer-menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-top: 10px;
+}
+
+.footer-menu a {
+	color: var(--dark-gray);
+	font-family: var(--logo-kr);
+	font-size: 12px;
+	line-height: 17px;
+	padding-right: 5px;
+	border-right: 1px solid var(--light-gray);
+}
+
+.footer-menu a:last-child {
+	border-right: none;
+}
+
+.footer-company-info {
+	margin-top: 10px;
+}
+
+.footer-company-info p {
+	margin: 0;
+	font-size: 8px;
+	line-height: 14px;
+	color: var(--light-gray);
+	font-family: var(--logo-kr);
+}
+
+/* #### Button CSS #### */
+.btn-primary {
+	display: block;
+	width: 100%;
+	border: none;
+	padding: 12px;
+	border-radius: 12px;
+}
+
+.btn-history-back,
+.btn-search {
+	border: none;
+	background-color: transparent;
+	font-size: 25px;
+}
+
+.btn-show-all {
+	display: block;
+	border-radius: 30px;
+	border: 1px solid var(--light-green);
+	padding: 8px;
+	text-align: center;
+	margin: 20px;
+	width: auto;
+	font-family: var(--logo-kr);
+}
+
+.btn-like {
+	border: none;
+	background-color: transparent;
+	font-size: 18px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.btn-like:after {
+	content: '\F417';
+	font-family: bootstrap-icons;
+	color: var(--light-gray);
+}
+
+.btn-like.active:after {
+	content: '\F415';
+	font-family: bootstrap-icons;
+	color: var(--red);
+}
+
+.btn-delete-all,
+.btn-delete {
+	border: none;
+	background-color: transparent;
+	text-decoration: underline;
+	color: var(--dark-gray);
+}
+
+/* #### Common CheckBox #### */
+.custom-checkbox label input[type=checkbox] {
+	display: none;
+}
+
+.custom-checkbox label input[type=checkbox]+em {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	font-style: normal;
+	transform: translateY(5px);
+}
+
+.custom-checkbox label input[type=checkbox]+em:before {
+	content: '\F26B';
+	font-family: bootstrap-icons;
+	color: var(--light-black);
+	display: inline-block;
+	transform: translateY(-3px);
+	font-size: 15px;
+}
+
+.custom-checkbox label input[type=checkbox]:checked+em:before {
+	content: '\F26A';
+	color: var(--light-green);
+}
+
+/* Main Slider Dots CSS */
+.slick-dots {
+	bottom: 14px;
+}
+
+.slick-dots li.slick-active button:before {
+	color: var(--green);
+	opacity: 1;
+}
+
+.slick-dots li {
+	margin: 0px 1px;
+}
+
+.slick-dots li button:before {
+	color: var(--gloudy);
+	opacity: 1;
+}
+
+.slick-dots li button:before {
+	font-size: 12px;
+}
+
+.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+
+/* #### Banner CSS #### */
+.banner img {
+	width: 100%;
+}
+
+
+/* #### Home Slide Item CSS #### */
+.product-sell-items {
+	margin: 15px 0;
+}
+
+/* .product-sell-item {
+	width: 131px;
+} */
+
+.product-sell-item .thum {
+	position: relative;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.158);
+}
+
+.product-sell-item .thum img {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+}
+
+.product-sell-item-desc {
+	padding: 7px 0;
+	overflow: hidden;
+}
+
+.product-sell-item-desc h3 {
+	font-size: 13px;
+	line-height: 19px;
+	font-weight: 500;
+	margin: 3px 0;
+}
+
+.product-sell-item-price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.product-sell-item-price-sale {
+	float: right;
+}
+
+.product-sell-item-price-sale s {
+	font-size: 8px;
+}
+
+.product-sell-item-price-sale b {
+	color: var(--red);
+	font-weight: 500;
+}
+
+/* #### 제품소개 Item CSS #### */
+.product-item {
+	width: 46%;
+	height: 225px;
+}
+
+.product-item .thum {
+	width: 100%;
+}
+
+.product-item .thum img {
+	width: inherit;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+}
+
+.product-item-desc {
+	width: 157px;
+	text-align: center;
+}
+
+.product-item-desc h3 {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.product-item-desc span {
+	display: block;
+	font-size: 10px;
+	line-height: 1.4em;
+}
+
+/* #### Badge CSS #### */
+.badge {
+	font-size: 9px;
+	border-radius: 6px;
+	background-color: var(--light-green);
+	color: #fff;
+	padding: 2px 7px;
+}
+
+.badge.red {
+	background-color: var(--red);
+}
+
+.badge.blue {
+	background-color: var(--blue);
+}
+
+.badge.soldout {
+	background-color: #333;
+}
+
+/* #### Total Cnt CSS #### */
+.total-cnt {
+	font-size: 12px;
+}
+
+.total-cnt span {
+	color: var(--green);
+	font-weight: 500;
+}
+
+/* #### Breadcrumb CSS #### */
+.breadcrumb {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.breadcrumb>a.logo {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: url(../images/logo.png) no-repeat center center;
+	background-size: 15px 15px;
+}
+
+
+.breadcrumb span {
+	font-family: var(--logo-kr);
+	font-size: 14px;
+	position: relative;
+	margin-right: 10px;
+}
+
+.breadcrumb span:after {
+	content: '\F285';
+	font-family: bootstrap-icons;
+	position: absolute;
+	right: -18px;
+	top: 48%;
+	transform: translateY(-50%);
+
+}
+
+.breadcrumb span:last-child {
+	color: var(--green);
+}
+
+.breadcrumb span:last-child:after {
+	content: '';
+}
+
+/* #### Page CSS #### */
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px 0;
+}
+
+.page a {
+	border: 1px solid var(--gloudy);
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	text-align: center;
+}
+
+.page a.active {
+	color: var(--green);
+}
+
+/* #### Table CSS #### */
+.primary-table {
+	margin: 20px 0;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	color: var(--dark-gray);
+}
+
+.primary-table th,
+.primary-table td {
+	border: 1px solid var(--light-gray);
+	font-size: 10px;
+}
+
+/* #### Custom Select CSS #### */
+.custom-select {
+	width: 180px;
+	height: 23px;
+	border: 1px solid var(--light-gloudy);
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.custom-select:after {
+	position: absolute;
+	content: '\F282';
+	font-family: bootstrap-icons;
+	right: 8px;
+	font-size: 11px;
+	top: 0px;
+	padding-left: 8px;
+	pointer-events: none;
+	color: var(--light-gray);
+	border-left: 1px solid var(--light-gloudy);
+}
+
+.custom-select select {
+	appearance: none;
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	padding-left: 16px;
+	color: var(--dark-gray);
+}
+
+/* #### Custom Number Input CSS #### */
+.custom-increase {
+	display: flex;
+	align-items: center;
+}
+
+.increase-quantity,
+.decrease-quantity {
+	border: none;
+	background-color: transparent;
+	border: 1px solid var(--gloudy);
+}
+
+.increase-quantity {
+	border-left: none;
+}
+
+.decrease-quantity {
+	border-right: none;
+}
+
+.custom-increase input[type="number"]::-webkit-outer-spin-button,
+.custom-increase input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.custom-increase input[type="number"] {
+	border: 1px solid var(--gloudy);
+	width: 50px;
+	text-align: center;
+}
+
+/* #### Popup CSS #### */
+.popup {
+	display: none;
+	background-color: #fff;
+	width: 276px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid var(--gloudy);
+	overflow: hidden;
+	text-align: center;
+}
+
+.btn-close-popup {
+	border: none;
+	background-color: transparent;
+	float: right;
+}
+
+/* #### Sort CSS #### */
+.sort {
+	margin: 15px 0;
+	overflow: hidden;
+}
+
+.sort .custom-select {
+	float: right;
+	width: 100px;
+}
+
+/* #### Card Item CSS #### */
+.card-item {
+	width: 46%;
+}
+
+.card-item .thum {
+	width: 100%;
+}
+
+.card-item .thum img {
+	width: 100%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-item-desc {
+	width: 100%;
+	margin-top: 6px;
+}
+
+.card-item-desc h3 {
+	font-size: 13px;
+	line-height: 1.4em;
+	margin-top: 6px;
+	font-weight: 500;
+}
+
+.card-item-desc .event-period {
+	font-size: 11px;
+}
+
+/* #### List Item CSS #### */
+.list-item {
+	display: flex;
+	justify-content: space-between;
+	font-size: 13px;
+	gap: 10px;
+	padding: 15px;
+	background-color: var(--snow);
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.list-item .index {
+	color: var(--green);
+	font-weight: 500;
+}
+
+.list-title .title {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.list-title .list-info {
+	font-size: 12px;
+}

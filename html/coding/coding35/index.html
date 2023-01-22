@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Card UI 연습</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="team-info-container">
+		<div class="team-information">
+			<h1>Team Information</h1>
+			<div class="team-member-items">
+				<div class="team-member">
+					<div class="profile">
+						<div class="thum">
+							<img src="./images/profile1.jpg" alt="프로필">
+						</div>
+						<button class="profile-menu"><i class="xi-ellipsis-v"></i></button>
+					</div>
+					<div class="profile-sub-menu">
+						<ul>
+							<li><a href="#none">프로필 보기</a></li>
+							<li><a href="#none">메세지 보내기</a></li>
+							<li><a href="#none">친구추가</a></li>
+						</ul>
+					</div>
+					<h3>조정원</h3>
+					<span>서울, 쌍문동</span>
+					<div class="sns">
+						<div class="left">
+							<a href="#none">
+								<i class="xi-skype"></i>
+							</a>
+							<a href="#none">
+								<i class="xi-instagram"></i>
+							</a>
+						</div>
+						<div class="right">
+							<a href="#none">
+								<i class="xi-kakaotalk"></i>
+							</a>
+						</div>
+					</div>
+					<div class="position-area">
+						<span>POSITION</span>
+						<p>퍼블리싱팀 주임</p>
+						<div class="task">
+							<span>TASK</span>
+							<div class="task-current">
+								<span style="width: 30%;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="team-member">
+					<div class="profile">
+						<div class="thum">
+							<img src="./images/profile2.jpg" alt="프로필">
+						</div>
+						<button class="profile-menu"><i class="xi-ellipsis-v"></i></button>
+					</div>
+					<div class="profile-sub-menu">
+						<ul>
+							<li><a href="#none">프로필 보기</a></li>
+							<li><a href="#none">메세지 보내기</a></li>
+							<li><a href="#none">친구추가</a></li>
+						</ul>
+					</div>
+					<h3>김민규</h3>
+					<span>서울, 서초구</span>
+					<div class="sns">
+						<div class="left">
+							<a href="#none">
+								<i class="xi-skype"></i>
+							</a>
+							<a href="#none">
+								<i class="xi-instagram"></i>
+							</a>
+						</div>
+						<div class="right">
+							<a href="#none">
+								<i class="xi-kakaotalk"></i>
+							</a>
+						</div>
+					</div>
+					<div class="position-area">
+						<span>POSITION</span>
+						<p>개발팀 선임</p>
+						<div class="task">
+							<span>TASK</span>
+							<div class="task-current">
+								<span style="width: 10%;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="team-member">
+					<div class="profile">
+						<div class="thum">
+							<img src="./images/profile3.jpg" alt="프로필">
+						</div>
+						<button class="profile-menu"><i class="xi-ellipsis-v"></i></button>
+					</div>
+					<div class="profile-sub-menu">
+						<ul>
+							<li><a href="#none">프로필 보기</a></li>
+							<li><a href="#none">메세지 보내기</a></li>
+							<li><a href="#none">친구추가</a></li>
+						</ul>
+					</div>
+					<h3>이소희</h3>
+					<span>인천, 부평구</span>
+					<div class="sns">
+						<div class="left">
+							<a href="#none">
+								<i class="xi-skype"></i>
+							</a>
+							<a href="#none">
+								<i class="xi-instagram"></i>
+							</a>
+						</div>
+						<div class="right">
+							<a href="#none">
+								<i class="xi-kakaotalk"></i>
+							</a>
+						</div>
+					</div>
+					<div class="position-area">
+						<span>POSITION</span>
+						<p>퍼블리싱팀 책임</p>
+						<div class="task">
+							<span>TASK</span>
+							<div class="task-current">
+								<span style="width: 60%;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			$('.profile-menu').click(function () {
+				$(this).parent().siblings('.profile-sub-menu').fadeToggle()
+			})
+		})
+	</script>
+</body>
+
+</html>

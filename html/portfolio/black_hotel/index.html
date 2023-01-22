@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Black Hotel</title>
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- Custom CSS & JS -->
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/custom.js"></script>
+	<!-- Slick Slider -->
+	<script src="./js/slick/slick.js"></script>
+	<link rel="stylesheet" href="./js/slick/slick-theme.css">
+	<link rel="stylesheet" href="./js/slick/slick.css">
+</head>
+
+<body>
+	<!-- include header -->
+	<div class="header-area"></div>
+	<!-- include header -->
+	<div class="wrap">
+		<main>
+			<div class="home-content">
+				<div class="banner-fast-reservation">
+					<div class="main-banner">
+						<a href="#none"><img src="./images/home_banner1.jpg"></a>
+						<a href="#none"><img src="./images/home_banner2.jpg"></a>
+						<a href="#none"><img src="./images/home_banner3.jpg"></a>
+						<a href="#none"><img src="./images/home_banner4.jpg"></a>
+					</div>
+					<div class="fast-reservation">
+						<form class="fast-reserv">
+							<div class="check-in">
+								<span>체크인</span>
+								<input type="date" id="check-in-date">
+							</div>
+							<div class="check-out">
+								<span>체크아웃</span>
+								<input type="date" id="check-out-date">
+							</div>
+							<div class="sleep-night">
+								<i class="bi bi-moon"></i>
+								<span><em class="night-cnt">1</em>박</span>
+							</div>
+							<div class="person-number">
+								<span>인원수</span>
+								<input type="text"><em>명</em>
+							</div>
+							<button class="btn-search"><i class="bi bi-search"></i>검색</button>
+						</form>
+					</div>
+				</div>
+				<div class="hotel-main-summary">
+					<div class="main-summary-content">
+						<div class="main-summary">
+							<h2>Relax in our <span>Resort</span></h2>
+							<p>블랙호텔은 수많은 국빈 방문과 국제행사를 치러내며<br> ‘한국을 대표
+								하는 호텔’로서 자부심과 책임감을
+								가지고<br> 우리나라 서비스 산업을 선도하고 있습니다.</p>
+						</div>
+						<div class="img-area">
+							<img src="./images/home_summary1.png">
+							<img src="./images/home_summary2.png">
+						</div>
+					</div>
+				</div>
+				<div class="hotel-best-room">
+					<div class="best-room-content">
+						<div class="best-room-title clearfix">
+							<h2 class="title">Best Room</h2>
+							<a href="#none"><span class="btn-show-all">전체보기</span></a>
+						</div>
+						<div class="best-room-list">
+							<div class="best-room first-best-room">
+								<img src="./images/bestroom1.png">
+								<div class="best-room-summary clearfix">
+									<h3>Rewards Special</h3>
+									<p>블랙호텔 회원에게만 제공하는 평일 투숙 전용 특별 프로모션</p>
+									<span>* 투숙일에 따라 금액은 변동됩니다.</span>
+									<span>* 본 상품은 Shilla S 멤버십 또는 카드사 할인 등의 중복 할인 혜택이 적용되지 않습니다.</span>
+									<button class="btn-reservation">예약하기</button>
+								</div>
+							</div>
+							<div class="best-room-not-first">
+								<div class="best-room">
+									<img src="./images/bestroom2.png">
+									<div class="best-room-reservation">
+										<button class="btn-reservation">예약하기</button>
+									</div>
+								</div>
+								<div class="best-room">
+									<img src="./images/bestroom3.png">
+									<div class="best-room-reservation">
+										<button class="btn-reservation">예약하기</button>
+									</div>
+								</div>
+								<div class="best-room">
+									<img src="./images/bestroom4.png">
+									<div class="best-room-reservation">
+										<button class="btn-reservation">예약하기</button>
+									</div>
+								</div>
+								<div class="best-room">
+									<img src="./images/bestroom5.png">
+									<div class="best-room-reservation">
+										<button class="btn-reservation">예약하기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hotel-swimming-pool">
+					<div class="swimming-pool-content">
+						<h2>Black Swimming Pool</h2>
+						<button class="btn-reservation">예약하기</button>
+					</div>
+				</div>
+				<div class="hotel-service">
+					<div class="service-content">
+						<h2>Black Hotel Service</h2>
+						<div class="services">
+							<div class="service">
+								<img src="./images/service1.png">
+								<p>요청시 모닝콜</p>
+							</div>
+							<div class="service">
+								<img src="./images/service2.png">
+								<p>요청시 모닝콜</p>
+							</div>
+							<div class="service">
+								<img src="./images/service3.png">
+								<p>요청시 모닝콜</p>
+							</div>
+							<div class="service">
+								<img src="./images/service4.png">
+								<p>요청시 모닝콜</p>
+							</div>
+							<div class="service">
+								<img src="./images/service5.png">
+								<p>요청시 모닝콜</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="hotel-area-of-use">
+					<div class="hotel-area-content">
+						<div class="hotel-restaurant">
+							<img src="./images/home-restaurant.png">
+							<div class="restaurant">
+								<h2>Black Restaurant</h2>
+								<p>객실에서 여유롭고 풍성하게 즐기는 서울신라호텔 룸서비스 디너 세트 메뉴</p>
+								<span>* 본 혜택에는 룸서비스 메뉴 3종(시저 샐러드 또는 그린 샐러드 중 택1, 해산물 스파게티 또는 신라 클럽 샌드위치 중 택1, 연어구이 또는 안심
+									스테이크 중 택1) 및 와인 1병이
+									제공됩니다.</span>
+							</div>
+						</div>
+					</div>
+					<div class="hotel-area-content">
+						<div class="hotel-lounge">
+							<div class="lounge">
+								<h2>Black Kids Lounge</h2>
+								<p>수백여 권의 도서와 자연 소재의 원목 장난감으로 가득 채워진 공간에서 보내는 자유로운 놀이 시간</p>
+								<span>* 운영시간 : 15:00 ~ 19:00 (단, 12월 25일 제외)
+									* 운영장소 : 5층 키즈 라운지</span>
+							</div>
+							<img src="./images/home-kids-lounge.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- include header -->
+		<div class="footer-area"></div>
+		<!-- include header -->
+	</div>
+
+
+</body>
+
+</html>

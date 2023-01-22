@@ -1,0 +1,69 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    font-weight: 300;
+    background-color: #34465d;
+    color: #222;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.gnb a {
+    text-transform: uppercase;
+    position: relative;
+    /*    border: 1px solid red;*/
+    width: 450px;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.gnb a:before,
+.gnb a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #7e7e7e;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.gnb a:hover {
+    letter-spacing: 6px;
+}
+
+.gnb a:hover:before {
+    transform: rotate(45deg);
+    background: transparent;
+}
+.gnb a:hover:after {
+    transform: rotate(-45deg);
+    background: transparent;
+}

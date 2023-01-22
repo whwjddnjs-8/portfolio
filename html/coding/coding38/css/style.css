@@ -1,0 +1,161 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	line-height: 1.4em;
+	font-weight: 300;
+	margin: 0;
+	background-color: #fff;
+	font-size: 15px;
+	color: #222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: block;
+	content: '';
+	line-height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+/* Tab Menu CSS */
+input[name=music-tab-menu] {
+	display: none;
+}
+
+.tab-buttons {
+	display: flex;
+	/* gap: 15px; */
+}
+
+.tab-buttons label {
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	border: 1px solid #ddd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input[id=tab1]:checked~.tab-buttons label[for=tab1],
+input[id=tab2]:checked~.tab-buttons label[for=tab2],
+input[id=tab3]:checked~.tab-buttons label[for=tab3],
+input[id=tab4]:checked~.tab-buttons label[for=tab4] {
+	color: rgb(0, 205, 96);
+	border: 1px solid rgb(0, 205, 96);
+}
+
+.music-tabs {
+	width: 900px;
+	border: 1px solid #ddd;
+	background-color: rgb(245, 245, 245);
+}
+
+.music-tab {
+	display: none;
+}
+
+input[id=tab1]:checked~.music-tabs .tab1,
+input[id=tab2]:checked~.music-tabs .tab2,
+input[id=tab3]:checked~.music-tabs .tab3,
+input[id=tab4]:checked~.music-tabs .tab4 {
+	display: block;
+}
+
+.music-items {
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.music-item {
+	position: relative;
+}
+
+.music-item .thum {
+	width: 200px;
+	height: 200px;
+}
+
+.music-item .thum img {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+}
+
+.btn-play {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 32px;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+.desc {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	padding: 8px;
+	background-color: rgba(0, 0, 0, 0.185);
+}
+
+.desc h3 {
+	margin: 0;
+	margin-bottom: 6px;
+	font-weight: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}

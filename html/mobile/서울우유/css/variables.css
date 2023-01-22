@@ -1,0 +1,37 @@
+/* Font Icon CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+/* Font Family CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+	font-family: 'SEOULMILK';
+	src: url('../fonts/SEOULMILK\ 500mL\ TTF.ttf') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	/* Font Family */
+	--primary-kr: 'Noto Sans KR', sans-serif;
+	--logo-kr: 'SEOULMILK';
+	--secondary-en: 'Roboto', sans-serif;
+
+	/* Text Color */
+	--dark-black: #333333;
+	--light-black: #555555;
+	--dark-gray: #777777;
+	--light-gray: #999999;
+	--silver-gray: #C0C0C0;
+	--light-gloudy: #F2F2F2;
+	--gloudy: #EEEEEE;
+	--snow : #F8F8F8;
+
+	/* Object Color */
+	--green: #009857;
+	--dark-green: #01573E;
+	--light-green: #6BBC6F;
+	--red: #E70014;
+	--blue: #007DD8;
+}

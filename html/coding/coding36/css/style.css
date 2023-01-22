@@ -1,0 +1,238 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	line-height: 1.4em;
+	font-weight: 300;
+	margin: 0;
+	background-color: #fff;
+	font-size: 15px;
+	color: #222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: block;
+	content: '';
+	line-height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.conatiner {
+	width: 1100px;
+}
+
+.phone-card-item {
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+/* 좋아요 버튼 */
+.btn-like {
+	float: right;
+	width: 30px;
+	height: 30px;
+	position: relative;
+}
+
+.btn-like:after {
+	content: '\ea11';
+	font-family: xeicon;
+	font-size: 25px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.btn-like.active:after {
+	content: '\ea10';
+	color: crimson;
+}
+
+.phone-card-items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+}
+
+.card-item-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.badge span {
+	padding: 0 8px;
+	border-right: 1px solid #ddd;
+	color: #2189FF;
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.badge span:last-child {
+	border-right: none;
+}
+
+.colors,
+.volume {
+	width: 300px;
+	margin: 15px auto;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.colors span {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.colors span.active {
+	border: 1px solid #222;
+}
+
+.volume span {
+	padding: 3px 10px;
+	border-radius: 25px;
+	border: 1px solid #222;
+	cursor: pointer;
+}
+
+.volume span.active {
+	border: 1px solid #2189FF;
+}
+
+.phone-card-item>h2 {
+	text-align: center;
+}
+
+.phone-card-item>p {
+	margin: 25px 0;
+	text-align: center;
+	color: #555;
+	font-size: 13px;
+}
+
+.price-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px
+}
+
+.price-info>span {
+	color: #444;
+	font-size: 16px;
+}
+
+.price-info>b {
+	font-weight: bold;
+	font-size: 24px;
+	color: #222;
+}
+
+.point-info {
+	margin: 15px 0;
+	text-align: center;
+}
+
+.point-info span {
+	color: #2189FF;
+	margin-left: 10px;
+	font-weight: 500;
+}
+
+.btn-buy {
+	width: 100%;
+	border-radius: 30px;
+	background-color: #222;
+	color: #fff;
+	padding: 10px;
+	font-weight: 500;
+}
+
+.more-desc {
+	margin: 15px 0;
+}
+
+.more-desc li {
+	margin-left: 30px;
+	font-size: 12px;
+	line-height: 1.2em;
+}
+
+.compare-and-rating {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+	padding-top: 15px;
+	border-top: 1px solid #ddd;
+}
+
+.compare button {
+	font-size: 15px;
+}
+
+.compare i {
+	font-size: 17px;
+	margin-right: 5px;
+}
+
+.rating i {
+	color: gold;
+}
+
+.rating b {
+	font-weight: normal;
+}

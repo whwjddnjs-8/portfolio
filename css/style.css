@@ -1,0 +1,1026 @@
+@import url(/css/reset.css);
+@import url(/css/variables.css);
+@import url(/css/common.css);
+@import url(/css/header.css);
+
+* {
+	font-family: var(--primary-kr);
+	font-weight: 400;
+}
+
+body {
+	color: #222;
+	background-color: #fff;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 100%;
+}
+
+/* #### Loading #### */
+.loading {
+	background-color: var(--primary-color);
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+svg {
+	position: absolute;
+}
+
+circle:nth-of-type(1) {
+	fill: #ffffff;
+}
+
+circle:nth-of-type(2) {
+	fill: #fcd837;
+}
+
+circle:nth-of-type(3) {
+	fill: #f9a11f;
+}
+
+circle:nth-of-type(4) {
+	fill: #f27c21;
+}
+
+#loading {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/* #### Home CSS #### */
+.home {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: 300% 300%;
+	background-image: linear-gradient(-45deg,
+			#ffffff 0%,
+			#c9d0d4 25%,
+			#a8c7fa 51%,
+			#ccffe0 100%);
+	animation: animtate-home-bg 10s ease infinite;
+	position: relative;
+}
+
+@keyframes animtate-home-bg {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.home-inner {
+	width: 1350px;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.introduce {
+	font-size: 32px;
+	line-height: 1.6em;
+	flex: 2;
+}
+
+.introduce span {
+	display: block;
+	font-size: 21px;
+	line-height: 1.4em;
+	margin-top: 10px;
+}
+
+.introduce b {
+	font-weight: bold;
+	font-size: 35px;
+	margin: 0 10px;
+}
+
+.btn-show-portfolio {
+	transition: 0.35s;
+	background-color: #fff;
+}
+
+.btn-show-portfolio:hover {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.animate-img {
+	flex: 1;
+	height: 500px;
+	background: url(/images/animate-bg1.png) no-repeat;
+	background-position: center center;
+	background-size: 500px;
+	transition: 0.35s;
+}
+
+.scroll-bar {
+	position: absolute;
+	bottom: 40px;
+	animation: scroll-mouse 3s linear infinite;
+
+}
+
+.scroll-bar img {
+	width: 50px;
+}
+
+@keyframes scroll-mouse {
+	0% {
+		bottom: 40px;
+	}
+
+	50% {
+		bottom: 15px;
+	}
+
+	100% {
+		bottom: 40px;
+	}
+
+}
+
+/* #### Home Responsive CSS #### */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.home-inner {
+		width: 90%;
+	}
+
+	.introduce {
+		width: 50%;
+		font-size: 23px;
+	}
+
+	.introduce span {
+		font-size: 17px;
+	}
+
+	.introduce b {
+		font-size: 27px;
+	}
+
+	.animate-img {
+		display: none;
+	}
+}
+
+@media (max-width : 480px) {
+	.home-inner {
+		width: 90%;
+		background: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.introduce {
+		width: 350px;
+		font-size: 23px;
+	}
+
+	.introduce span {
+		font-size: 17px;
+	}
+
+	.introduce b {
+		font-size: 27px;
+	}
+
+	.animate-img {
+		display: none;
+	}
+}
+
+/* #### About CSS #### */
+.about-inner {
+	width: 1350px;
+	margin: auto;
+	min-height: 100vh;
+	padding: 80px 0
+}
+
+.about-content {
+	width: 100%;
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.about-content .thumb {
+	width: 80%;
+	flex: 1.3;
+}
+
+.about-content .thumb img {
+	width: inherit;
+}
+
+.about-info {
+	flex: 2;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.personal-info,
+.growth-info {
+	padding: 20px 5px;
+}
+
+.personal-info h3,
+.growth-info h3 {
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+ul.about-list li {
+	padding-bottom: 13px;
+	font-size: 16px;
+	position: relative;
+}
+
+.growth-info ul.about-list li {
+	padding-left: 37px;
+}
+
+.growth-info ul.about-list li:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 15px;
+	height: 39px;
+	background: url(/images/progress-bar.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+ul.about-list li span {
+	margin-right: 8px;
+	font-size: 18px;
+	display: inline-block;
+	width: 80px;
+	color: #777;
+	font-weight: bold;
+}
+
+/* #### About Responsive CSS #### */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.about-inner {
+		width: 90%;
+		padding: 30px 0;
+		min-height: 600px;
+	}
+
+	.about-content {
+		width: 100%;
+		margin-top: 30px;
+		display: block;
+	}
+
+	.about-content .thumb {
+		width: 100%;
+		height: 300px;
+	}
+
+	.about-content .thumb img {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+	}
+
+	.personal-info h3,
+	.growth-info h3,
+	.certificate-info h3 {
+		font-size: 20px;
+	}
+
+	ul.about-list li {
+		font-size: 13px;
+		padding-bottom: 10px;
+	}
+
+	ul.about-list li span {
+		font-size: 13px;
+	}
+
+	.growth-info ul.about-list li:before {
+		display: inline-block;
+		width: 15px;
+		height: 30px;
+		background: url(/images/progress-bar2.png) no-repeat;
+	}
+
+}
+
+@media (max-width : 480px) {
+	.about-inner {
+		width: 90%;
+		padding: 30px 0;
+	}
+
+	.about-content {
+		width: 100%;
+		margin-top: 30px;
+		display: block;
+	}
+
+	.about-content .thumb {
+		width: 100%;
+		height: 200px;
+	}
+
+	.about-content .thumb img {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+	}
+
+	.about-info {
+		display: block;
+
+	}
+
+	.personal-info h3,
+	.growth-info h3,
+	.certificate-info h3 {
+		font-size: 18px;
+		text-align: center;
+	}
+
+	ul.about-list {
+		width: 80%;
+		margin: auto;
+	}
+
+	ul.about-list li {
+		font-size: 11px;
+		line-height: 1.2em;
+	}
+
+	ul.about-list li span {
+		font-size: 11px;
+	}
+
+	.growth-info ul.about-list li:before {
+		display: inline-block;
+		width: 15px;
+		height: 30px;
+		background: url(/images/progress-bar2.png) no-repeat;
+	}
+}
+
+
+/* #### Skill CSS #### */
+.skill {
+	background-color: #fafcff;
+}
+
+.skill-inner {
+	width: 1350px;
+	margin: auto;
+	min-height: 100vh;
+	padding: 80px 0
+}
+
+.skill-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 45px;
+	margin-top: 50px;
+}
+
+.skill-item {
+	text-align: center;
+}
+
+.skill-item img {
+	width: 100px;
+}
+
+.skill-item h3 {
+	font-weight: bold;
+	font-size: 23px;
+	margin: 12px 0;
+	text-transform: uppercase;
+}
+
+.skill-item p {
+	width: 85%;
+	margin: 8px auto;
+	font-size: 15px;
+}
+
+/* #### Skill Responsive CSS #### */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.skill-inner {
+		width: 80%;
+		padding: 30px 0;
+	}
+
+	.skill-items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+}
+
+@media (max-width : 480px) {
+	.skill-inner {
+		width: 90%;
+		padding: 30px 0;
+	}
+
+	.skill-items {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.skill-item h3 {
+		font-size: 17px;
+	}
+
+	.skill-item p {
+		font-size: 13px;
+	}
+}
+
+/* #### Portfolio CSS #### */
+.portfolio {
+	margin: 80px 0;
+}
+
+.portfolio-title {
+	width: 1350px;
+	margin: auto;
+}
+
+.portfolio-items {
+	width: 100%;
+}
+
+.portfolio-content {
+	margin-top: 50px;
+	overflow-x: hidden;
+}
+
+.portfolio-item {
+	border-top: 2px solid rgb(235, 235, 235);
+	border-bottom: 2px solid rgb(235, 235, 235);
+	background-color: rgb(252, 252, 252);
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+}
+
+.portfolio-project {
+	width: 1350px;
+	height: inherit;
+	margin: auto;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 35px;
+}
+
+.portfolio-desc {
+	flex: 1;
+}
+
+.portfolio-background {
+	flex: 1;
+	height: 500px;
+	/* background: url(/html/portfolio/black_hotel/background.png) no-repeat;
+	background-position: center center;
+	background-size: contain; */
+}
+
+.portfolio-background img {
+	width: 100%;
+}
+
+/* #### Portfolio Responsive CSS #### */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.portfolio-background {
+		display: none;
+	}
+
+	.portfolio-project {
+		width: 80%;
+		display: block;
+	}
+
+	.portfolio-title {
+		width: 80%;
+	}
+
+	.portfolio-background {
+		display: none;
+	}
+
+	.project-desc {
+		width: 100% !important;
+	}
+}
+
+@media (max-width : 480px) {
+	.portfolio-inner {
+		width: 90%;
+		padding: 30px 0;
+	}
+
+	.portfolio-project {
+		width: 80%;
+		display: block;
+	}
+
+	.portfolio-background {
+		display: none;
+	}
+
+	.portfolio-title {
+		width: 90%;
+	}
+
+	.portfolio-background {
+		display: none;
+	}
+
+	.project-desc {
+		width: 100% !important;
+	}
+}
+
+/* #### Mobile CSS #### */
+.mobile-title {
+	width: 1350px;
+	margin: auto;
+}
+
+.mobile-items {
+	width: 100%;
+}
+
+.mobile-content {
+	margin-top: 50px;
+	overflow-x: hidden;
+}
+
+.mobile-item {
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+}
+
+.mobile-item.seoul-milk {
+	background-color: #6BBC6F;
+}
+
+.mobile-item.lovely-mood {
+	background-color: #F2E7C4;
+}
+
+.mobile-project {
+	width: 1350px;
+	height: inherit;
+	margin: auto;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mobile-project .phone {
+	width: 50%;
+	height: inherit;
+	position: relative;
+}
+
+.mobile-project .phone div:first-child {
+	position: absolute;
+	top: 0;
+	left: -100px;
+}
+
+.mobile-project .phone div:last-child {
+	position: absolute;
+	bottom: 0;
+	left: 80px;
+}
+
+.mobile_background {
+	display: none;
+}
+
+/* #### Mobile Responsive CSS #### */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.mobile-project {
+		display: block;
+	}
+
+	.mobile-item {
+		height: 650px;
+	}
+
+	.mobile-title {
+		width: 80%
+	}
+
+	.mobile-project .phone {
+		display: none;
+	}
+
+	.project-desc {
+		padding: 20px 80px;
+		display: block;
+		width: 57% !important;
+		margin-top: 10px;
+	}
+
+	.project-desc h1 {
+		font-size: 25px;
+	}
+
+	.mobile_background {
+		display: block;
+		width: 100%;
+		height: 250px;
+		width: 57%;
+	}
+
+	.seoul-milk .mobile_background {
+		background: url('../html/mobile/서울우유/background_moible.png') no-repeat;
+		background-size: center center;
+	}
+
+	.lovely-mood .mobile_background {
+		background: url('../html/mobile/lovely_mood/background_mobile.png') no-repeat;
+		background-size: center center;
+	}
+
+	ul.project-info li span {
+		font-size: 14px;
+	}
+}
+
+@media (max-width : 480px) {
+	.mobile-project {
+		display: block;
+	}
+
+	.mobile-item {
+		height: 580px;
+	}
+
+	.mobile-title {
+		width: 90%;
+	}
+
+	.mobile-project .phone {
+		display: none;
+	}
+
+	.project-desc {
+		padding: 10px 40px;
+		display: block;
+		width: 30%;
+		margin-top: 10px;
+	}
+
+	.project-desc h1 {
+		font-size: 20px;
+	}
+
+	.mobile_background {
+		display: block;
+		height: 200px;
+		width: 30%;
+	}
+
+	.seoul-milk .mobile_background {
+		background: url('../html/mobile/서울우유/background_moible.png') no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	.lovely-mood .mobile_background {
+		background: url('../html/mobile/lovely_mood/background_mobile.png') no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	ul.project-info li,
+	ul.project-info li span {
+		font-size: 12px;
+	}
+}
+
+
+
+/* #### Clone Coding CSS #### */
+.clone-inner {
+	width: 1350px;
+	margin: auto;
+	min-height: 100vh;
+	padding: 80px 0
+}
+
+.clone-coding-content {
+	width: 1300px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.clone-coding-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 35px;
+}
+
+.clone-coding-item {
+	width: 80%;
+}
+
+.clone-coding-item .thum a {
+	display: inline-block;
+}
+
+.clone-coding-item .thum,
+.clone-coding-item .thum a {
+	width: 100%;
+	height: 256px;
+	overflow: hidden;
+}
+
+.clone-coding-item .thum {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clone-coding-item .thum img {
+	width: inherit;
+	height: inherit;
+	object-fit: contain;
+	transition: 0.3s;
+}
+
+.clone-coding-item .thum:hover img {
+	transform: scale(1.1);
+}
+
+.clone-coding-item .desc {
+	text-align: center;
+}
+
+.clone-coding-item .desc h3 {
+	font-size: 20px;
+	margin: 15px 0;
+	font-weight: 500;
+}
+
+.clone-coding-item .desc .badge {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.clone-coding-item .desc .badge span {
+	padding: 3px 10px;
+	border-radius: 15px;
+	background-color: var(--primary-color);
+	font-size: 13px;
+	color: #fff;
+}
+
+/* #### Clone Coding Responsive CSS #### */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.clone-inner {
+		width: 80%;
+		padding: 30px 0;
+	}
+
+	.clone-coding-content {
+		width: 100%;
+	}
+
+	.clone-coding-items {
+		grid-template-columns: repeat(1, 1fr);
+		place-items: center;
+	}
+}
+
+@media (max-width : 480px) {
+	.clone-inner {
+		width: 90%;
+		padding: 30px 0;
+	}
+
+	.clone-coding-content {
+		width: 100%;
+	}
+
+	.clone-coding-items {
+		grid-template-columns: repeat(1, 1fr);
+		place-items: center;
+	}
+
+	.clone-coding-item .thum,
+	.clone-coding-item .thum a {
+		height: 180px;
+	}
+
+	.clone-coding-item .desc h3 {
+		font-size: 16px;
+	}
+
+	.clone-coding-item .desc a {
+		display: block;
+		margin-bottom: 10px;
+	}
+}
+
+/* #### Coding CSS #### */
+.coding {
+	background-color: #fafcff;
+}
+
+.coding-inner {
+	width: 1350px;
+	margin: auto;
+	min-height: 100vh;
+	padding: 80px 0
+}
+
+input[name=coding-tab-menu] {
+	display: none;
+}
+
+input[id=coding-tab1]:checked~.coding-tab-buttons label[for=coding-tab1],
+input[id=coding-tab2]:checked~.coding-tab-buttons label[for=coding-tab2],
+input[id=coding-tab3]:checked~.coding-tab-buttons label[for=coding-tab3],
+input[id=coding-tab4]:checked~.coding-tab-buttons label[for=coding-tab4],
+input[id=coding-tab5]:checked~.coding-tab-buttons label[for=coding-tab5] {
+	color: var(--dark-blue);
+}
+
+input[id=coding-tab1]:checked~.coding-tab-buttons label[for=coding-tab1]:after,
+input[id=coding-tab2]:checked~.coding-tab-buttons label[for=coding-tab2]:after,
+input[id=coding-tab3]:checked~.coding-tab-buttons label[for=coding-tab3]:after,
+input[id=coding-tab4]:checked~.coding-tab-buttons label[for=coding-tab4]:after,
+input[id=coding-tab5]:checked~.coding-tab-buttons label[for=coding-tab5]:after {
+	content: '';
+	width: 100%;
+}
+
+.coding-tab {
+	display: none;
+}
+
+input[id=coding-tab1]:checked~.coding-tabs .coding-tab1,
+input[id=coding-tab2]:checked~.coding-tabs .coding-tab2,
+input[id=coding-tab3]:checked~.coding-tabs .coding-tab3,
+input[id=coding-tab4]:checked~.coding-tabs .coding-tab4,
+input[id=coding-tab5]:checked~.coding-tabs .coding-tab5 {
+	display: block;
+}
+
+.coding-tab-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 45px;
+	padding: 50px 0;
+}
+
+.coding-tab-buttons label {
+	color: var(--dark-gray);
+	position: relative;
+}
+
+.coding-tab-buttons label:after {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	bottom: -5px;
+	left: 0;
+	background-color: var(--dark-blue);
+	transition: 0.35s;
+}
+
+.coding-tab-buttons label:hover:after {
+	width: 100%;
+}
+
+.coding-items {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 25px;
+}
+
+.coding-item {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+}
+
+.coding-item a {
+	width: inherit;
+	height: inherit;
+}
+
+.coding-item a img {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.coding-item i {
+	position: absolute;
+	font-size: 30px;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.2);
+	opacity: 0;
+	transition: 0.35s;
+	pointer-events: none;
+}
+
+.coding-item:before {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: 0.35s;
+	pointer-events: none;
+	border-radius: 5px;
+}
+
+.coding-item:hover::before {
+	opacity: 1;
+}
+
+.coding-item:hover i {
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+/* #### Coding Responsive CSS #### */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.coding-inner {
+		width: 80%;
+		padding: 30px 0;
+	}
+
+	.coding-items {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 25px;
+	}
+}
+
+@media (max-width : 480px) {
+	.coding-inner {
+		width: 90%;
+		padding: 30px 0;
+	}
+
+	.coding-items {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 25px;
+	}
+}

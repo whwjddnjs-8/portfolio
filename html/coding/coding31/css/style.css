@@ -1,0 +1,127 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    font-weight: 300;
+    background: #fff;
+    color: #222;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+section {
+    width: 800px;
+}
+
+.tab-inner {
+    margin-top: 30px;
+}
+
+.btn {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.btn li {
+    float: left;
+    background-color: gray;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #eee;
+    border-right: 1px solid #ddd;
+    padding: 5px;
+    border-top: 2px solid transparent;
+}
+
+.btn li:hover,
+.btn li.active {
+    background-color: #fff;
+    border-top: 2px solid rgb(55, 148, 255);
+}
+
+.btn li:last-child {
+    width: 170px;
+    border-right: none;
+}
+
+.tabs {}
+
+.tabs div {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.tabs div.active {
+    display: block;
+}
+
+/* Tab Content */
+.tabs div h2 {
+    text-align: center;
+}
+
+.tabs div img {
+    float: left;
+    margin-right: 20px;
+}
+
+.tabs div p {
+    overflow: hidden;
+}
+
+/* Heading */
+.heading h1 {
+    font-size: 25px;
+}
+
+.heading h1 span {
+    color: rgb(55, 148, 255);
+}
+
+.heading input[type=text] {
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background: #fff url(../images/search-icon.png) no-repeat center left 5px;
+    background-size: 23px;
+    padding-left: 32px;
+}
+
+.heading input[type=text]::placeholder {
+    font-style: italic;
+    transition: 0.3s;
+}
+
+.heading input[type=text]:focus::placeholder {
+    opacity: 0;
+}

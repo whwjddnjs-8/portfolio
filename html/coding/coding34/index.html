@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03. 모달만들기 페이드인아웃 모달</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a href="#none" onclick="openModal()">Open Fade-In Modal width jQuery</a>
+
+    <div id="modal-notice" class="modal">
+        <div class="modal-content">
+            <a class="btn-close" href="#none" onclick="removeModal()">X</a>
+            <h2>Welcome to Teams!</h2>
+            <img src="./images/group.png">
+            <p>
+                Microsoft Teams is a collaboration app built for hybrid work so you and your team stay informed,
+                organized, and
+                connected — all in one place.
+            </p>
+            <a class="btn-guide" href="#none">Open Guide</a>
+        </div>
+    </div>
+    <script>
+        let modal = document.getElementById('modal-notice');
+
+        function openModal() {
+            modal.classList.add('active')
+        }
+
+        function removeModal() {
+            modal.classList.remove('active')
+        }
+    </script>
+</body>
+
+</html>

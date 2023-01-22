@@ -1,0 +1,101 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.5em;
+    font-weight: 300;
+    color: #222;
+    background: linear-gradient(90deg, #DCE358, #45B649);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.gnb {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding-bottom: 10px;
+}
+
+.gnb a {
+/*    border: 1px solid red;*/
+    width: 80px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gnb a:before,
+.gnb a:after{
+    position: absolute;
+    content: attr(data-link);
+    width: 100%;
+    transition: 0.3s;
+}
+
+.gnb a:before {
+    top: 0;
+    left: 0;
+}
+.gnb a:after {
+    top: 100%;
+    left: 0;
+    color: #45B649;
+}
+
+.gnb a:hover:before {
+    top: -100%;
+}
+.gnb a:hover:after {
+    top: 0;
+}
+/*
+.gnb a span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.gnb a span:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.gnb a span:nth-child(2) {
+    top: 100%;
+    left: 0;
+    color: #45B649;
+}
+
+.gnb a:hover span:nth-child(1) {
+    top: -100%;
+}
+
+.gnb a:hover span:nth-child(2) {
+    top: 0;
+}
+*/

@@ -1,0 +1,157 @@
+@import url('/css/variables.css');
+@import url('/css/reset.css');
+@import url('/css/common.css');
+
+* {
+	font-family: var(--process-kr);
+	font-weight: 400;
+}
+
+body {
+	color: #222;
+	background-color: #fff;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.responsive-btn {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+}
+
+.responsive-btn a {
+	display: block;
+	padding: 5px 25px;
+	border: 1px solid var(--primary-color);
+	border-radius: 30px;
+	margin-bottom: 10px;
+	text-align: center;
+	transition: 0.35s;
+}
+
+.responsive-btn a:hover {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.container {
+	width: 65%;
+	margin: 30px auto;
+}
+
+/* #### Clone Coding #### */
+.clone-coding-title {
+	text-align: center;
+}
+
+.clone-coding-title h1 {
+	font-weight: bold;
+}
+
+.main-img {
+	width: 100%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.main-img img {
+	width: inherit;
+	vertical-align: top;
+}
+
+.clone-coding-desc {
+	padding: 25px 0;
+	margin-top: 25px;
+	border-top: 2px solid var(--gloudy);
+	border-bottom: 2px solid var(--gloudy);
+}
+
+.clone-coding-desc h2 {
+	font-weight: 500;
+}
+
+.clone-coding-desc h2 b {
+	color: var(--primary-color);
+	font-weight: bold;
+}
+
+.clone-coding-project-desc {
+	margin-bottom: 20px;
+	padding: 20px;
+	border: 1px solid var(--gloudy);
+}
+
+.clone-coding-project-desc li {
+	font-size: 17px;
+	margin-bottom: 5px;
+}
+
+.clone-coding-project-desc li span {
+	font-weight: 500;
+	margin-right: 5px;
+	color: var(--dark-gray);
+	display: inline-block;
+	width: 80px;
+}
+
+.work-process {
+	width: 100%;
+	margin-top: 80px;
+}
+
+.work-process .process {
+	margin: 30px 0;
+}
+
+.work-process h1 {
+	font-weight: bold;
+}
+
+.work-process h1 i {
+	margin-right: 10px;
+}
+
+.work-process img {
+	width: 100%;
+}
+
+/* #### Responsive CSS #### */
+@media (max-width : 480px) {
+	.container {
+		width: 90%;
+	}
+
+	.clone-coding-title h1 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.clone-coding-desc h2 {
+		font-size: 18px;
+	}
+
+	.clone-coding-desc p {
+		font-size: 14px;
+		line-height: 1.4em;
+	}
+
+	.clone-coding-project-desc {
+		margin-bottom: 10px;
+		padding: 10px;
+	}
+
+	.clone-coding-project-desc li {
+		font-size: 14px;
+		margin-bottom: 3px;
+	}
+
+	.work-process {
+		margin-top: 20px;
+	}
+
+	.work-process h1 {
+		font-size: 20px;
+	}
+
+}

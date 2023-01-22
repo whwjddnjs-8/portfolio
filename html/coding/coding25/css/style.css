@@ -1,0 +1,93 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    font-weight: 300;
+    background-color: #fff;
+    color: #222;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.tab-inner {
+    /*    border: 1px solid red;*/
+    width: 300px;
+    height: 350px;
+    position: relative;
+}
+
+input[name=tabmenu] {
+    display: none;
+}
+
+.content {
+    /*    display: none;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.btn {
+    /*    position: absolute를 주는 순간 inline-block이 되면서 width 값을 잃어버림  */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.btn label {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 3px;
+}
+
+input[id=tab1]:checked~.slide1,
+input[id=tab2]:checked~.slide2,
+input[id=tab3]:checked~.slide3 {
+    /*display: block;*/
+    opacity: 1;
+    visibility: visible;
+}
+
+
+input[id=tab1]:checked~.btn label:nth-child(1) {
+    background-color: green;
+}
+
+
+input[id=tab2]:checked~.btn label:nth-child(2) {
+    background-color: green;
+}
+
+
+input[id=tab3]:checked~.btn label:nth-child(3) {
+    background-color: green;
+}

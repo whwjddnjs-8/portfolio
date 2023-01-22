@@ -1,0 +1,82 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.4em;
+    font-weight: 300;
+    margin: 0;
+    background-color: #ffeb60;
+    font-size: 20px;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* Mille Books FAQ with jQuery */
+.faq-inner {
+    width: 750px;
+    margin: auto;
+}
+
+.faq-inner h1 {
+    text-align: center;
+    margin-top: 0;
+
+}
+
+.accordion-item {
+    background-color: #fff;
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.accordion-item .title {
+    font-weight: bold;
+}
+
+.accordion-item .title:after {
+    content: '\f107';
+    font-family: fontawesome;
+    float: right;
+    transition: 0.35s;
+}
+
+.accordion-item .title.active {
+    padding-bottom: 15px;
+}
+
+.accordion-item .title.active:after {
+    transform: rotate(180deg);
+}
+
+.accordion-item .content {
+    border-top: 1px solid #000;
+    font-size: 15px;
+    padding-top: 15px;
+    display: none;
+}

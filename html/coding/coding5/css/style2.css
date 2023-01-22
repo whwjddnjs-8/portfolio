@@ -1,0 +1,117 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    font-weight: 300;
+    background-color: #fff;
+    color: #222;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.tab-inner {
+    height: 500px;
+    /*    border: 1px solid green;*/
+}
+
+.tab-inner h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+input[name=tabmenu] {
+    display: none;
+}
+
+.tabs {
+    /*    border: 1px solid red;*/
+    width: 800px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.items {
+    width: 800px;
+    height: 1200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.items div {
+    /*    border: 1px solid blue;*/
+    width: 800px;
+    height: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 40px;
+}
+
+.items div img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.items div p b {
+    display: block;
+}
+
+.items div p span {
+    color: orange;
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn label {
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[id=tab1]:checked ~ .tabs .items {
+    top: 0;
+}
+
+input[id=tab2]:checked ~ .tabs .items {
+    top: -400px;
+}
+
+input[id=tab3]:checked ~ .tabs .items {
+    top: -800px;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+    background-color: crimson;
+    border-radius: 50%;
+}

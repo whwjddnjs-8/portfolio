@@ -1,0 +1,176 @@
+/* Common */
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.m0 {
+    margin: 0 !important;
+}
+
+.mt0 {
+    margin-top: 0 !important;
+}
+
+.mt5 {
+    margin-top: 5px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mt50 {
+    margin-top: 50px !important;
+}
+
+.mt60 {
+    margin-top: 60px !important;
+}
+
+.mt70 {
+    margin-top: 70px !important;
+}
+
+.mt80 {
+    margin-top: 80px !important;
+}
+
+.mt90 {
+    margin-top: 90px !important;
+}
+
+.mt200 {
+    margin-top: 200px !important;
+}
+
+.h10 {
+    height: 10%;
+}
+
+.h20 {
+    height: 20%;
+}
+
+.h30 {
+    height: 30%;
+}
+
+.h40 {
+    height: 40%;
+}
+
+.h50 {
+    height: 50%;
+}
+
+.h60 {
+    height: 60%;
+}
+
+.h70 {
+    height: 70%;
+}
+
+.h80 {
+    height: 80%;
+}
+
+.h90 {
+    height: 90%;
+}
+
+.h95 {
+    height: 95%;
+}
+
+.mb200 {
+    margin-bottom: 500px !important;
+}
+
+.pb200 {
+    padding-bottom: 800px !important;
+}
+
+/* Swiper Button */
+.swiper-button-prev {
+    background-image: url(../images/prev.svg) !important;
+    width: 60px !important;
+    height: 60px !important;
+    background-size: 53px 53px !important;
+}
+
+.swiper-button-next {
+    background-image: url(../images/next.svg) !important;
+    width: 60px !important;
+    height: 60px !important;
+    background-size: 53px 53px !important;
+}
+
+@media (max-width : 765px) {
+    .swiper-button-prev {
+        width: 40px !important;
+        height: 40px !important;
+        background-size: 33px 33px !important;
+    }
+
+    .swiper-button-next {
+        width: 40px !important;
+        height: 40px !important;
+        background-size: 33px 33px !important;
+    }
+}
+
+.swiper-pagination {
+    bottom: 22px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    background: #fff !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 25px !important;
+    height: 12px !important;
+    border-radius: 8px !important;
+    background: $primary_color !important;
+}
+
+.bg_primary {
+    background-color: $primary_color !important;
+}
+
+.bg_secondary {
+    background-color: $secondary_color !important;
+}
+
+.bg_third {
+    background-color: $third_color !important;
+}
+
+.bg_fourth {
+    background-color: $fourth_color !important;
+}
+
+.bg_fifth {
+    background-color: $fifth_color !important;
+}
+
+.bg_sixth {
+    background-color: $sixth_color !important;
+}

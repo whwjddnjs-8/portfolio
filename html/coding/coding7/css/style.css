@@ -1,0 +1,77 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 18px;
+  background-color: #222;
+}
+
+.heart-beat {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: #ff4757;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: 0 -10px 100px #ff4757, 0 -10px 150px #ff4757, 0 -10px 200px #ff4757;
+          box-shadow: 0 -10px 100px #ff4757, 0 -10px 150px #ff4757, 0 -10px 200px #ff4757;
+  -webkit-animation: heart-beat 0.6s linear infinite;
+          animation: heart-beat 0.6s linear infinite;
+}
+@-webkit-keyframes heart-beat {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.05);
+            transform: rotate(45deg) scale(1.05);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(0.95);
+            transform: rotate(45deg) scale(0.95);
+  }
+}
+@keyframes heart-beat {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.05);
+            transform: rotate(45deg) scale(1.05);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(0.95);
+            transform: rotate(45deg) scale(0.95);
+  }
+}
+.heart-beat:before, .heart-beat:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  border-radius: 50%;
+}
+.heart-beat::before {
+  top: -50%;
+}
+.heart-beat::after {
+  left: -50%;
+}

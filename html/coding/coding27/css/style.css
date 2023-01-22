@@ -1,0 +1,131 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    font-weight: 300;
+    background-color: #fff;
+    color: #222;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.gnb a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.gnb a:before {
+    position: absolute;
+    content: '';
+    background-color: crimson;
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.gnb a:hover:before {
+    width: 100%;
+}
+
+.gnb1 a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.gnb1 a:before {
+    position: absolute;
+    content: '';
+    background-color: crimson;
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    transition: 0.3s;
+    right: 0;
+}
+
+.gnb1 a:hover:before {
+    width: 100%;
+}
+
+.gnb2 a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.gnb2 a:before {
+    position: absolute;
+    content: '';
+    background-color: crimson;
+    height: 2px;
+    width: 2px;
+    bottom: 0;
+    transition: 0.3s;
+    left: 0;
+}
+
+.gnb2 a:hover:before {
+    left: calc(100% - 2px);
+}
+
+.gnb3 a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.gnb3 a:before {
+    position: absolute;
+    content: '';
+    background-color: crimson;
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    transition: 0.3s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gnb3 a:hover:before {
+    width: 100%;
+}
+
+.gnb4 a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.gnb4 a:before {
+    position: absolute;
+    content: '';
+    background-color: crimson;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    transition: 0.3s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gnb4 a:hover:before {
+    width: 0;
+}

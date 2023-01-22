@@ -1,0 +1,36 @@
+/* Font Icon CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+/* Font Family CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+:root {
+	/* Font Family */
+	--primary-kr: 'Noto Sans KR', sans-serif;
+	--primary-en: 'Merriweather', serif;
+	--secondary-en: 'Roboto', sans-serif;
+	--secondary-kr: 'Nanum Myeongjo', serif;
+
+	/* Text Color */
+	--dark-black: #333333;
+	--light-black: #555555;
+	--dark-gray: #777777;
+	--light-gray: #999999;
+	--silver-gray: #C0C0C0;
+	--gloudy: #EEEEEE;
+
+	/* Object Color */
+	--light-beige: #F2E7C4;
+	--brown: #8C704F;
+	--dark-brown: #614A2F;
+	--light-brown: #BFA38A;
+	--semi-hot-pink: #F27E88;
+	--light-orange: #F2C791;
+	--pink: #EEA199;
+	--crimson: #FF3E3E;
+	--skyblue : #A8E0FF;
+	--apricot : #FFF9F6;
+}

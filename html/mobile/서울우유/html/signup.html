@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>서울우유</title>
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- Slick Slider -->
+	<script src="../js/slick/slick.js"></script>
+	<link rel="stylesheet" href="../js/slick/slick-theme.css">
+	<link rel="stylesheet" href="../js/slick/slick.css">
+	<!-- Custom CSS & JS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/custom.js"></script>
+	<!-- Favicon -->
+	<link rel="icon" href="../images/favicon.png">
+</head>
+
+
+<body>
+	<div class="container signup">
+		<div class="signup-inner">
+			<div class="signup-header">
+				<button class="btn-history-back" onclick="history.back()">
+					<i class="bi bi-chevron-left"></i>
+				</button>
+				<h2>회원가입</h2>
+			</div>
+			<div class="signup-content">
+				<p>회원정보를 입력해주세요.</p>
+				<div class="signup-form">
+					<input type="text" placeholder="아이디(이메일)">
+					<input type="password" placeholder="비밀번호">
+					<input type="password" placeholder="비밀번호 확인">
+					<input type="text" placeholder="이름">
+					<div class="flex-space-between">
+						<input type="text" placeholder="휴대폰번호(숫자만입력)">
+						<button class="btn-certificate-number">인증번호 받기</button>
+					</div>
+					<div class="flex-space-between">
+						<input type="text" placeholder="인증번호">
+						<button class="btn-confirm">확인</button>
+					</div>
+				</div>
+				<div class="signup-agree">
+					<div class="all-agree">
+						<div class="custom-checkbox">
+							<label>
+								<input type="checkbox" class="signup-all-check"><em></em> 모두 확인하였으며 동의합니다.
+							</label>
+						</div>
+						<p>전체 동의에는 필수 및 선택 정보에 대한 동의가 포함되어 있으며, 개별적으로 동의를 선택 하실 수 있습니다. 선택 항목에 대한 동의를 거부하시는 경우에도 서비스 이용이
+							가능합니다.</p>
+					</div>
+					<div class="part-agree">
+						<div class="custom-checkbox">
+							<label>
+								<input type="checkbox"><em></em> [필수] 만 14세 이상입니다
+							</label>
+						</div>
+						<div class="custom-checkbox">
+							<label>
+								<input type="checkbox"><em></em> [필수] 구매이용약관
+							</label>
+						</div>
+						<div class="custom-checkbox">
+							<label>
+								<input type="checkbox"><em></em> [필수] 전자금융거래 약관
+							</label>
+						</div>
+						<div class="custom-checkbox">
+							<label>
+								<input type="checkbox"><em></em> [필수] 개인정보의 수집 및 이용동의
+							</label>
+						</div>
+						<div class="custom-checkbox">
+							<label>
+								<input type="checkbox"><em></em> [선택] 마케팅 이용내역 동의
+							</label>
+						</div>
+						<div class="custom-checkbox">
+							<label>
+								<input type="checkbox"><em></em> [선택] 광고성 정보 수신 동의
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="signup-btn-area">
+					<button class="btn-cancel">취소</button>
+					<button class="btn-signup">회원가입</button>
+				</div>
+			</div>
+			<!-- include gnb html -->
+			<div class="gnb-include"></div>
+			<!-- include gnb html -->
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+* {
+    font-family: $kor-font;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+caption {
+    display: none;
+}

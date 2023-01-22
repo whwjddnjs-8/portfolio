@@ -1,0 +1,444 @@
+@import url(./header.css);
+@import url(./common.css);
+@import url(./footer.css);
+@import url(./reset.css);
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+:root {
+    --primary-color: #4682BF;
+    --primary-color-opacity: #4682bf23;
+    --sub-color: #abc6e2;
+    --eng-font: 'Noto Sans';
+    --kor-font: 'Noto Sans KR';
+    --twitter-color-code: #00ACEE;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--eng-font)
+}
+
+html,
+body {
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.body-wrapper {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.body-content {
+    padding-top: 150px;
+}
+
+/* Main Banner Area */
+.scroll-parent-background {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: rgb(31, 30, 30);
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroll-parent {
+    position: relative;
+    width: 4550px;
+    height: 400px;
+    overflow-x: hidden;
+}
+
+.scroll-element {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    animation: primary 30s linear infinite;
+}
+
+.primary {
+    animation: primary 30s linear infinite;
+}
+
+.secondary {
+    animation: secondary 30s linear infinite;
+}
+
+@keyframes primary {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes secondary {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+/* Pad */
+@media (min-width : 768px) and (max-width : 1400px) {
+    .scroll-parent {
+        width: 3220px;
+        height: 290px;
+    }
+
+    .scroll-element.primary img,
+    .scroll-element.secondary img {
+        height: inherit;
+    }
+}
+
+/* Mobile */
+@media (max-width : 767px) {
+    .body-content {
+        padding-top: 130px;
+    }
+
+
+    .scroll-parent-background {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: rgb(31, 30, 30);
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .scroll-parent {
+        width: 2030px;
+        height: 180px;
+    }
+
+    .scroll-element.primary img,
+    .scroll-element.secondary img {
+        height: inherit;
+    }
+
+    .scroll-element {
+        animation: primary 40s linear infinite;
+    }
+
+    .primary {
+        animation: primary 40s linear infinite;
+    }
+
+    .secondary {
+        animation: secondary 40s linear infinite;
+    }
+}
+
+.container {
+    max-width: 1310px;
+    margin: auto;
+
+}
+
+.half-container {
+    max-width: 1310px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+@media (max-width : 1400px) {
+    .half-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+.album-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.album-area .album {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.35s;
+    width: 100%;
+}
+
+.album-area .album:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
+}
+
+.album-area .album img {
+    width: inherit;
+}
+
+.album-area .album p {
+    font-size: 18px;
+}
+
+.album-area .album p span {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (min-width : 768px) and (max-width : 1400px) {
+    .album-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width : 767px) {
+    .album-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .album-area .album img {
+        width: 100%;
+    }
+
+    .album-area .album p {
+        font-size: 13px;
+    }
+
+    .album-area .album p span {
+        font-size: 15px;
+    }
+}
+/* 
+.video-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1r);
+} */
+
+.video {
+    position: relative;
+    margin: 20px;
+}
+
+.video img {
+    width: 100%;
+    height: 400px;
+}
+
+.video button {
+    position: absolute;
+    width: 90px;
+    height: 65px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: 0.35s;
+    color: #fff;
+    background-color: #222;
+    font-size: 43px;
+    border: none;
+}
+
+.video button:hover {
+    background-color: #444;
+}
+
+@media (min-width : 768px) and (max-width : 1400px) {
+    .video-area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .video img {
+        height: 340px;
+    }
+}
+
+/* Mobile */
+@media (max-width : 767px) {
+    .video img {
+        height: 200px;
+    }
+
+    .video button {
+        width: 50px;
+        height: 38px;
+        line-height: 38px;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+
+    .slick-prev {
+        left: -27px !important;
+        transform: translateY(-25px) !important;
+    }
+
+    .slick-prev:before {
+        font-size: 32px !important;
+    }
+
+    .slick-next:after {
+        font-size: 32px;
+        position: absolute;
+        top: 2px;
+        left: -13px;
+
+    }
+}
+
+.twitter-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+.twitter-area .item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    padding: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.twitter-area .item:hover {
+    border: 1px solid var(--twitter-color-code);
+}
+
+.twitter-area .item .logo-area {
+    display: flex;
+}
+
+.twitter-area .item .logo-area img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.twitter-area .item .logo-area p {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.twitter-area .item .logo-area p span {
+    display: block;
+    font-weight: normal;
+    color: #555;
+}
+
+.twitter-area .comment-area {
+    margin-top: 15px;
+    font-size: 17px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.twitter-area .comment-area .comment a {
+    text-decoration: underline;
+    color: var(--twitter-color-code);
+}
+
+.twitter-area .comment-area .comment {
+    display: inline-block;
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.5;
+    height: 132px;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+
+.twitter-area .image-area {
+    max-width: inherit;
+    height: 200px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.twitter-area .image-area img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.twitter-area .date {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #bbb;
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    padding-bottom: 20px;
+}
+
+.twitter-area .date span {
+    display: block;
+}
+
+@media (min-width : 768px) and (max-width : 1400px) {
+    .twitter-area .comment-area {
+        margin: 50px 0;
+    }
+
+    .twitter-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width : 767px) {
+    .twitter-area .comment-area {
+        margin: 30px 0;
+    }
+
+    .twitter-area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .twitter-area .image-area img {
+        height: 80%;
+    }
+
+    .twitter-area .date {
+        font-size: 13px;
+    }
+}

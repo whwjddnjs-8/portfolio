@@ -1,0 +1,127 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Goggle Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* XEIcon */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.7em;
+    font-weight: 300;
+    margin: 0;
+    background-color: #000;
+    font-size: 18px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* Netflix with jQuery */
+
+.faq {
+    height: 100vh;
+}
+
+.faq-inner {
+    width: 700px;
+    margin: auto;
+}
+
+.faq-inner h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.accordion {
+    font-size: 20px;
+}
+
+.accordion .title,
+.accordion .content {
+    background-color: #303030;
+    padding: 10px 15px;
+    margin-bottom: 7px;
+}
+
+.accordion .title {
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion .title:after {
+    content: '\e9c5';
+    font-family: xeicon;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.35s;
+}
+
+.accordion .title.active {
+    background-color: #353b48;
+}
+
+.accordion .title.active:after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.accordion .content {
+    display: none;
+}
+
+.newsletter {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.newsletter div {
+    display: flex;
+}
+
+.newsletter div input[type=email],
+.newsletter div button {
+    border: none;
+    outline: none;
+    height: 50px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.newsletter div input[type=email] {
+    flex: 3;
+}
+
+.newsletter div button {
+    background-color: #e84118;
+    color: #fff;
+    cursor: pointer;
+    flex: 1;
+}
+
+.newsletter div button:after {
+    content: '\e93f';
+    font-family: xeicon;
+    font-size: 18px;
+    display: inline-block;
+    transform: translateY(2px);
+    padding-left: 5px;
+}

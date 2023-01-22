@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.mockup-inner {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    .mockup {
+        .mobile-mockup {
+            border: 1px solid #eee;
+            width: 430px;
+            height: 850px;
+            position: relative;
+            border-radius: 30px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                border: 1px solid #ddd;
+                width: 98.5%;
+                height: 99.5%;
+                border-radius: 28px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            }
+
+            .iframe-url {
+                position: absolute;
+                width: 400px;
+                height: 680px;
+                color: #fff;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                //centering
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2em;
+                border: 1px solid #eee;
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .camera {
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 400px;
+                height: 70px;
+
+                span {
+                    position: absolute;
+                    background-color: #333;
+
+                    &:nth-child(1) {
+                        width: 80px;
+                        height: 7px;
+                        border-radius: 7px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    &:nth-child(2) {
+                        border-radius: 50%;
+                        width: 15px;
+                        height: 15px;
+                        left: 130px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:nth-child(3) {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        top: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                }
+
+            }
+
+            .home-btn {
+                position: absolute;
+                width: 400px;
+                height: 85px;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+
+                span {
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 1px solid #ddd;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 65px;
+                        height: 65px;
+                        border-radius: 50%;
+                        border: 1px solid #ddd;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        box-shadow: inset 0 0 5px #606060;
+                    }
+                }
+            }
+
+            .power {
+                position: absolute;
+                right: 0;
+                top: 87px;
+
+                span {
+                    position: absolute;
+                    width: 7px;
+                    height: 40px;
+                    background-color: blue;
+                    border-radius: 0 5px 5px 0;
+
+                }
+            }
+
+            .volume {
+                position: absolute;
+                width: 7px;
+                height: 150px;
+                top: 87px;
+                right: 100%;
+
+                span {
+                    position: absolute;
+                    width: 7px;
+                    height: 40px;
+                    border-radius: 0 5px 5px 0;
+                    transform: rotateY(180deg);
+
+                    &:nth-child(1) {
+                        top: 0;
+                        height: 25px;
+                    }
+
+                    &:nth-child(2) {
+                        bottom: 45px;
+                    }
+
+                    &:nth-child(3) {
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .volume span,
+            .power span {
+                background-color: #ddd;
+            }
+        }
+    }
+}

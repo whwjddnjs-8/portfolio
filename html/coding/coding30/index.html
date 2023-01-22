@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1. 탭 메뉴 콘텐츠 with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="testimonial-section">
+        <h1><span>Member Job</span> in Team</h1>
+        <div class="testimonial-pic">
+            <img class="active" src="images/face-01.jpg" data-alt="tab1">
+            <img src="images/face-02.jpg" data-alt="tab2">
+            <img src="images/face-03.jpg" data-alt="tab3">
+            <img src="images/face-04.jpg" data-alt="tab4">
+        </div>
+        <div class="testimonial">
+            <div class="content active" id="tab1">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perferendis aperiam nam,
+                    numquam veritatis saepe fuga? Enim, placeat a eveniet et eius id omnis repudiandae fuga quae ratione
+                    dolore, molestias aspernatur velit consectetur pariatur illum qui ipsum provident nobis laboriosam!
+                    Deserunt possimus deleniti ipsum laudantium saepe, beatae quam odio molestiae similique non
+                    laboriosam amet inventore necessitatibus sint incidunt temporibus, praesentium, odit qui quos quia
+                    ut, sed soluta ad consequatur iste. Nemo sit officia corporis doloribus similique culpa quo veniam
+                    et.
+                </p>
+                <p>Sally, Web Desginer</p>
+            </div>
+            <div class="content" id="tab2">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eligendi sunt et omnis ullam
+                    corrupti incidunt nemo ipsam, quos ut consectetur? Obcaecati atque, enim expedita, quibusdam eum
+                    cumque omnis porro. Fuga magni velit tenetur quaerat, dolorem dolore ex dolor maiores ipsa,
+                    voluptatem natus nemo molestiae, vitae aperiam repellat voluptas? Voluptas qui quidem eveniet rerum
+                    expedita quo aliquid possimus. Eligendi tenetur consequatur veniam id incidunt quibusdam nesciunt
+                    dolor laudantium adipisci animi omnis fugiat sit vero, unde, corrupti numquam odit accusamus
+                    voluptates!
+                </p>
+                <p>Amy, Graphic Designer</p>
+            </div>
+            <div class="content" id="tab3">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos rem corrupti dignissimos! Ullam
+                    voluptate placeat accusamus, praesentium quae iusto voluptates enim! Cumque ad maxime porro cum
+                    quibusdam iste magni adipisci officiis architecto iusto, voluptas praesentium, reprehenderit!
+                    Nostrum voluptates, ipsa consequatur placeat repellendus est laborum, fugit hic perspiciatis
+                    asperiores quis aliquid molestias. Expedita facilis, ut reiciendis? Soluta eius saepe porro? Quidem
+                    cupiditate quas odio dolores dolor rerum cumque unde maiores culpa fugit amet deleniti in,
+                    consectetur incidunt asperiores, voluptate provident!
+                </p>
+                <p>Jung Ho, Developer</p>
+            </div>
+            <div class="content" id="tab4">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa consectetur aut, magni eligendi,
+                    iusto non consequatur, accusamus quod quam sapiente dolorem dolore consequuntur officiis asperiores
+                    accusantium. Facilis explicabo quaerat eaque ab. Soluta officia animi nostrum corporis, incidunt ex
+                    non deserunt omnis quo ab, ut velit, minima voluptatem sequi officiis neque dolor temporibus
+                    aperiam! Eligendi porro vitae quos dignissimos beatae fugit, tempora odit ullam animi consequatur
+                    est deserunt dolorum incidunt quisquam commodi dolore officiis magni a saepe harum delectus at
+                    repudiandae.
+                </p>
+                <p>Chris, Printing Desinger</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.testimonial-pic img').click(function () {
+            // 눌린애 한테 active 클래스 추가
+            $(this).addClass('active');
+            // 눌린애 형제 들은 active 클래스 제거
+            $(this).siblings().removeClass('active');
+
+            $('.testimonial .content').removeClass('active');
+            // #tab1 === $(this).attr('data-alt') 
+            $('#' + $(this).attr('data-alt')).addClass('active');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+/* #### Common CSS #### */
+/* #### Menu Title CSS #### */
+.title {
+	font-weight: bold;
+	font-size: 40px;
+	margin: 8px 0;
+}
+
+.sub-title {
+	font-size: 17px;
+}
+
+.top-title {
+	margin-left: 5px;
+	position: relative;
+}
+
+.top-title:after {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	width: 22px;
+	height: 3px;
+	background-color: var(--primary-color);
+	bottom: -7px;
+	left: -2px;
+}
+
+/* #### Button CSS #### */
+/* #### 뒤로가기 버튼 #### */
+.go-back-history {
+	border: none;
+	background-color: transparent;
+	position: fixed;
+	top: 30px;
+	left: 30px;
+	padding: 8px;
+	border-radius: 8px;
+	background-color: #fff;
+	font-weight: bold;
+	font-size: 22px;
+	border: 2px solid var(--primary-color);
+}
+
+.btn-primary {
+	border: none;
+	padding: 10px 20px;
+	background-color: transparent;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+.btn-show {
+	border-radius: 0px;
+	background-color: transparent;
+	border: 1px solid #444;
+	padding: 5px 20px;
+	font-size: 14px;
+	transition: 0.35s;
+	color: #444;
+}
+
+.btn-show:hover {
+	background-color: #fff;
+	border: 1px solid transparent;
+}
+
+/* #### Clearfix CSS #### */
+.clearfix:before,
+.clearfix:after {
+	display: block;
+	content: '';
+	line-height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+/* #### featherlight Custom CSS #### */
+.featherlight .featherlight-content {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	max-height: 100% !important;
+	width: 100%;
+	height: 100%;
+}
+
+.featherlight .featherlight-inner {
+	width: 100%;
+	height: 100%;
+}
+
+.featherlight .featherlight-close-icon {
+	top: 30px !important;
+	right: 30px !important;
+	line-height: 50px !important;
+	width: 50px !important;
+	font-size: 28px;
+	font-weight: bold;
+	background-color: #fff !important;
+	color: #222 !important;
+	border-radius: 50%;
+}
+
+/* #### Common Responsive CSS #### */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.title {
+		font-size: 22px;
+	}
+
+	.sub-title {
+		font-size: 15px;
+	}
+}
+
+@media (max-width : 480px) {
+	.title {
+		font-size: 20px;
+	}
+
+	.sub-title {
+		font-size: 14px;
+	}
+
+	.btn-show {
+		padding: 4px 15px;
+		font-size: 13px;
+	}
+}
+
+/* Slick Slider Custom CSS */
+.portfolio-items .slick-arrow,
+.mobile-items .slick-arrow {
+	z-index: 100;
+}
+
+.portfolio-items .slick-prev,
+.mobile-items .slick-prev {
+	left: 30px;
+}
+
+.portfolio-items .slick-prev:before,
+.mobile-items .slick-prev:before {
+	content: '\e93b';
+	font-family: xeicon;
+	zoom: 2;
+	color: #fff;
+	font-size: 20px;
+}
+
+.portfolio-items .slick-prev:before {
+	color: #222;
+}
+
+.portfolio-items .slick-next,
+.mobile-items .slick-next {
+	right: 30px;
+}
+
+.portfolio-items .slick-next:before,
+.mobile-items .slick-next:before {
+	content: '\e93e';
+	font-family: xeicon;
+	zoom: 2;
+	color: #fff;
+	font-size: 20px;
+}
+
+.portfolio-items .slick-next:before {
+	color: #222;
+}
+
+.portfolio-items .slick-dots,
+.mobile-items .slick-dots {
+	bottom: 20px
+}
+
+.portfolio-items .slick-dots li,
+.mobile-items .slick-dots li {
+	margin: 0;
+	width: 25px;
+	height: 25px;
+}
+
+.portfolio-items .slick-dots li.slick-active button:before,
+.mobile-items .slick-dots li.slick-active button:before {
+	color: #222;
+}
+
+.portfolio-items .slick-dots li button:before,
+.mobile-items .slick-dots li button:before {
+	color: #fff;
+	opacity: 1;
+	zoom: 1.1;
+}
+
+.portfolio-items .slick-dots li button:before {
+	color: #ddd;
+}
+
+@media (max-width : 480px) {
+
+	.portfolio-items .slick-prev,
+	.mobile-items .slick-prev {
+		left: 20px;
+	}
+
+	.portfolio-items .slick-prev:before,
+	.mobile-items .slick-prev:before {
+		zoom: 1.2;
+		font-size: 12px;
+	}
+
+	.portfolio-items .slick-next,
+	.mobile-items .slick-next {
+		right: 20px;
+	}
+
+	.portfolio-items .slick-next:before,
+	.mobile-items .slick-next:before {
+		zoom: 1.2;
+		font-size: 12px;
+	}
+
+	.portfolio-items .slick-dots,
+	.mobile-items .slick-dots {
+		bottom: 10px
+	}
+
+	.portfolio-items .slick-dots li,
+	.mobile-items .slick-dots li {
+		width: 15px;
+		height: 15px;
+	}
+
+	.portfolio-items .slick-dots li button:before,
+	.mobile-items .slick-dots li button:before {
+		zoom: 0.8;
+	}
+}
+
+/* #### Project Info #### */
+ul.project-info {
+	margin: 20px 0;
+}
+
+ul.project-info li {
+	margin-bottom: 5px;
+}
+
+ul.project-info li span {
+	display: inline-block;
+	width: 80px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.project-desc {
+	width: 45%;
+}
+
+.project-desc h1 {
+	font-weight: bold;
+	font-size: 32px;
+}
+
+.project-desc>span {
+	display: block;
+}
