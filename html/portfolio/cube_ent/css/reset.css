@@ -12,3 +12,8 @@ li {
 caption {
     display: none;
 }
+
+button {
+    border: none;
+    background-color: transparent;
+}

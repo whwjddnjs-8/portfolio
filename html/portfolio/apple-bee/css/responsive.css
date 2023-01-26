@@ -1,0 +1,6 @@
+/* Header */
+@media (min-width : 480px) and (max-width : 1024px) {
+	.top-header-wrapper {
+		width: 90%;
+	}
+}

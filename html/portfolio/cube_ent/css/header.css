@@ -2,7 +2,6 @@ header {
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
-    padding: 15px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,10 +10,12 @@ header {
 }
 
 .header-wrapper {
-    width: 75%;
+    width: 1200px;
+    height: 80px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    align-items: center;
     font-weight: 500;
 }
 
@@ -26,12 +27,20 @@ header {
 .menu-area ul {
     list-style: none;
     display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-.menu-area ul li {
-    padding: 0 30px;
+.menu-area ul.main-menu li {
     cursor: pointer;
     line-height: 50px;
+    position: relative;
+    font-size: 16px;
+}
+
+.menu-area ul.main-menu li ul.sub-menu {
+    position: absolute;
+    background-color: #fff;
 }
 
 .user-contact a {
@@ -98,12 +107,12 @@ header {
     }
 }
 
+
 .header-menu-pan {
-    background-color: #e9f4fd;
+    background-color: #555;
     width: 100%;
     height: auto;
     display: none;
-
 }
 
 .menu-category {
@@ -128,6 +137,7 @@ header {
 .menu-category .category a {
     width: 100%;
     position: relative;
+    color: #fff;
 }
 
 .menu-category .category a:before {

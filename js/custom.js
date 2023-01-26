@@ -1,6 +1,14 @@
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
 $(function () {
 	/* AOS */
 	AOS.init();
+	
+	/* Mobile 일때에 Background Size 변경 */
+	 if(isMobile) {
+		 $('.home').css({ "animation": "none" })
+		 $('.home').css("background-size","cover")
+	}
 	
 	/* Home section을 지나면 header을 보이게함 */
 	$(window).on('scroll',function() {
@@ -22,11 +30,11 @@ $(function () {
 			$('.pc_menu .gnb a').removeClass('active')
 			$('.pc_menu .gnb:nth-child(3) a').addClass('active')
 		}
-		if (checkVisible($('#portfolio'))) { 
+		if (checkVisible($('#mobile'))) { 
 			$('.pc_menu .gnb a').removeClass('active')
 			$('.pc_menu .gnb:nth-child(4) a').addClass('active')
 		}
-		if (checkVisible($('#mobile'))) { 
+		if (checkVisible($('#portfolio'))) { 
 			$('.pc_menu .gnb a').removeClass('active')
 			$('.pc_menu .gnb:nth-child(5) a').addClass('active')
 		}
@@ -48,20 +56,6 @@ $(function () {
 	$('.mobile-close-menu, .mobile-menu-content li').click(function () {
 		$('.mobile-menu').fadeOut()
 	})
-
-	/* Home Background Animation */
-	let idx = 0;
-	setInterval(function () {
-		if (idx == 0) {
-			$('.animate-img').css('background', 'url(/images/animate-bg2.png) no-repeat center center')
-			$('.animate-img').css('background-size', '500px')
-			idx = 1;
-		} else {
-			$('.animate-img').css('background', 'url(/images/animate-bg1.png) no-repeat center center')
-			$('.animate-img').css('background-size', '500px')
-			idx = 0;
-		}
-	},3000)
 
 	/* Portfolio Slider */
 	$('.portfolio-items').slick({

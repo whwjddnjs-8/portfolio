@@ -66,27 +66,31 @@ circle:nth-of-type(4) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-size: 300% 300%;
-	background-image: linear-gradient(-45deg,
-			#ffffff 0%,
-			#c9d0d4 25%,
-			#a8c7fa 51%,
-			#ccffe0 100%);
-	animation: animtate-home-bg 10s ease infinite;
+	background: url(../images/home-background.jpg) no-repeat;
+	background-position: center center;
+	animation: animtate-home-bg 100s ease infinite;
 	position: relative;
 }
 
 @keyframes animtate-home-bg {
 	0% {
-		background-position: 0% 50%
+		background-size: 100%;
+	}
+
+	25% {
+		background-size: 150%;
 	}
 
 	50% {
-		background-position: 100% 50%
+		background-size: 200%;
+	}
+
+	75% {
+		background-size: 150%;
 	}
 
 	100% {
-		background-position: 0% 50%
+		background-size: 100%;
 	}
 }
 
@@ -99,17 +103,42 @@ circle:nth-of-type(4) {
 	gap: 20px;
 }
 
-.introduce {
-	font-size: 32px;
-	line-height: 1.6em;
-	flex: 2;
+.introduce h1 {
+	font-size: 40px;
+	line-height: 1.5em;
 }
 
-.introduce span {
-	display: block;
-	font-size: 21px;
-	line-height: 1.4em;
+.introduce h1 span {
 	margin-top: 10px;
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+	font-size: 40px;
+	color: transparent;
+	transform: translateY(10px);
+	overflow: hidden;
+}
+
+.introduce h1 span:after {
+	content: '조정원';
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	font-size: 40px;
+	color: #222;
+	animation: name-animation 0.6s linear;
+	animation-fill-mode: both;
+}
+
+@keyframes name-animation {
+	0% {
+		bottom: -100%;
+	}
+
+	100% {
+		bottom: 0%;
+	}
 }
 
 .introduce b {
@@ -126,15 +155,6 @@ circle:nth-of-type(4) {
 .btn-show-portfolio:hover {
 	background-color: var(--primary-color);
 	color: #fff;
-}
-
-.animate-img {
-	flex: 1;
-	height: 500px;
-	background: url(/images/animate-bg1.png) no-repeat;
-	background-position: center center;
-	background-size: 500px;
-	transition: 0.35s;
 }
 
 .scroll-bar {
@@ -239,8 +259,12 @@ circle:nth-of-type(4) {
 	width: inherit;
 }
 
-.about-info {
+.about-information {
 	flex: 2;
+}
+
+.about-info {
+	/* flex: 2; */
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
@@ -399,7 +423,7 @@ ul.about-list li span {
 
 /* #### Skill CSS #### */
 .skill {
-	background-color: #fafcff;
+	background-color: #fffafa;
 }
 
 .skill-inner {
@@ -492,7 +516,6 @@ ul.about-list li span {
 	border-top: 2px solid rgb(235, 235, 235);
 	border-bottom: 2px solid rgb(235, 235, 235);
 	background-color: rgb(252, 252, 252);
-	width: 100%;
 	height: 600px;
 	display: flex;
 	justify-content: center;
@@ -516,71 +539,91 @@ ul.about-list li span {
 .portfolio-background {
 	flex: 1;
 	height: 500px;
-	/* background: url(/html/portfolio/black_hotel/background.png) no-repeat;
-	background-position: center center;
-	background-size: contain; */
 }
 
 .portfolio-background img {
 	width: 100%;
 }
 
+.m-portfolio-background {
+	display: none;
+}
+
 /* #### Portfolio Responsive CSS #### */
 @media (min-width : 480px) and (max-width : 1024px) {
+	.portfolio-title {
+		width: 80%
+	}
+
+	.portfolio-item {
+		padding: 20px 0;
+		height: 709px;
+	}
+
 	.portfolio-background {
 		display: none;
 	}
 
 	.portfolio-project {
-		width: 80%;
 		display: block;
 	}
 
-	.portfolio-title {
-		width: 80%;
+	.m-portfolio-background {
+		display: block;
+		width: 100vw;
+		height: 300px;
+		display: flex;
+		justify-content: center;
 	}
 
-	.portfolio-background {
-		display: none;
-	}
-
-	.project-desc {
-		width: 100% !important;
+	.m-portfolio-background img {
+		width: inherit;
+		height: inherit;
+		object-fit: contain;
 	}
 }
 
 @media (max-width : 480px) {
-	.portfolio-inner {
-		width: 90%;
-		padding: 30px 0;
+	.portfolio-title {
+		width: 90%
+	}
+
+	.portfolio-item {
+		padding: 20px 0;
+		height: 563px;
+	}
+
+	.portfolio-background {
+		display: none;
 	}
 
 	.portfolio-project {
-		width: 80%;
 		display: block;
 	}
 
-	.portfolio-background {
-		display: none;
+	.m-portfolio-background {
+		display: block;
+		width: 98vw;
+		height: 180px;
+		display: flex;
+		justify-content: center;
 	}
 
-	.portfolio-title {
-		width: 90%;
-	}
-
-	.portfolio-background {
-		display: none;
-	}
-
-	.project-desc {
-		width: 100% !important;
+	.m-portfolio-background img {
+		width: inherit;
+		height: inherit;
+		object-fit: contain;
 	}
 }
 
 /* #### Mobile CSS #### */
+.mobile {
+	padding: 80px 0;
+}
+
 .mobile-title {
 	width: 1350px;
-	margin: auto;
+	margin: 0 auto;
 }
 
 .mobile-items {
@@ -589,7 +632,6 @@ ul.about-list li span {
 
 .mobile-content {
 	margin-top: 50px;
-	overflow-x: hidden;
 }
 
 .mobile-item {
@@ -615,12 +657,21 @@ ul.about-list li span {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 30px;
 }
 
 .mobile-project .phone {
-	width: 50%;
+	flex: 1.5;
 	height: inherit;
 	position: relative;
+}
+
+.mobile_background {
+	display: none;
+}
+
+.project-desc {
+	flex: 1;
 }
 
 .mobile-project .phone div:first-child {
@@ -635,13 +686,11 @@ ul.about-list li span {
 	left: 80px;
 }
 
-.mobile_background {
-	display: none;
-}
 
 /* #### Mobile Responsive CSS #### */
 @media (min-width : 480px) and (max-width : 1024px) {
 	.mobile-project {
+		padding-top: 20px;
 		display: block;
 	}
 
@@ -677,12 +726,13 @@ ul.about-list li span {
 
 	.seoul-milk .mobile_background {
 		background: url('../html/mobile/서울우유/background_moible.png') no-repeat;
-		background-size: center center;
+		background-position: center center;
+
 	}
 
 	.lovely-mood .mobile_background {
 		background: url('../html/mobile/lovely_mood/background_mobile.png') no-repeat;
-		background-size: center center;
+		background-position: center center;
 	}
 
 	ul.project-info li span {
@@ -727,13 +777,13 @@ ul.about-list li span {
 	.seoul-milk .mobile_background {
 		background: url('../html/mobile/서울우유/background_moible.png') no-repeat;
 		background-position: center center;
-		background-size: cover;
+		background-size: 480px;
 	}
 
 	.lovely-mood .mobile_background {
 		background: url('../html/mobile/lovely_mood/background_mobile.png') no-repeat;
 		background-position: center center;
-		background-size: cover;
+		background-size: 480px;
 	}
 
 	ul.project-info li,
@@ -741,8 +791,6 @@ ul.about-list li span {
 		font-size: 12px;
 	}
 }
-
-
 
 /* #### Clone Coding CSS #### */
 .clone-inner {
@@ -869,7 +917,7 @@ ul.about-list li span {
 
 /* #### Coding CSS #### */
 .coding {
-	background-color: #fafcff;
+	background-color: #fffafa;
 }
 
 .coding-inner {

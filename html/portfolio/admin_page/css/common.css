@@ -1,0 +1,385 @@
+/* #### Clearfix CSS #### */
+.clearfix:before,
+.clearfix:after {
+	display: block;
+	content: '';
+	line-height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+/* Custom Checkbox */
+.custom-check label input[type=checkbox] {
+	display: none;
+}
+
+.custom-check label input[type=checkbox]+em {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	font-style: normal;
+	transform: translateY(5px);
+}
+
+.custom-check label input[type=checkbox]+em::before {
+	content: '\F26D';
+	font-family: bootstrap-icons;
+	color: var(--dark-gray);
+	display: inline-block;
+	transform: translateY(-3px);
+	font-size: 15px;
+}
+
+.custom-check label input[type=checkbox]:checked+em::before {
+	content: '\F26C';
+	font-family: bootstrap-icons;
+	color: var(--blue);
+}
+
+/* Custom Radio Button CSS */
+.custom-radio>* {
+	margin-right: 8px;
+}
+
+.custom-radio label input[type=radio] {
+	display: none;
+}
+
+.custom-radio label input[type=radio]+em {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	font-style: normal;
+	transform: translateY(5px);
+}
+
+.custom-radio label input[type=radio]+em::before {
+	content: '\F28A';
+	font-family: bootstrap-icons;
+	color: var(--dark-gray);
+	display: inline-block;
+	transform: translateY(-3px);
+	font-size: 15px;
+}
+
+.custom-radio label input[type=radio]:checked+em::before {
+	content: '\F518';
+	font-family: bootstrap-icons;
+	color: var(--blue);
+}
+
+/* Custom Select */
+.custom-select {
+	width: 120px;
+	height: 37px;
+	border-radius: 10px;
+	border: 1px solid var(--light-gray);
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.custom-select:after {
+	position: absolute;
+	content: '\F282';
+	font-family: bootstrap-icons;
+	right: 8px;
+	font-size: 11px;
+	top: 8px;
+	padding-left: 8px;
+	pointer-events: none;
+}
+
+.custom-select select {
+	appearance: none;
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	padding-left: 16px;
+	background: #fff;
+}
+
+/* Menu Title */
+.menu-title {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+	display: flex;
+	margin: 18px 0;
+	background-color: transparent;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+.breadcrumb>* {
+	position: relative;
+	margin-right: 16px;
+}
+
+.breadcrumb>*:after {
+	content: '\F285';
+	font-family: bootstrap-icons;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #333;
+	font-size: 14px;
+}
+
+.breadcrumb>*:last-child:after {
+	content: '';
+}
+
+@media (min-width : 480px) and (max-width : 1024px) {
+	.menu-title {
+		font-size: 20px;
+	}
+
+}
+
+@media (max-width : 480px) {
+	.menu-title {
+		font-size: 20px;
+	}
+
+}
+
+/* Primary Table */
+.table-container {
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.primary-table,
+.detail-table {
+	width: 100%;
+	border-collapse: collapse;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+	border-radius: 20px;
+	overflow: hidden;
+	text-align: center;
+	margin: 30px 0;
+	font-size: 15px;
+}
+
+.primary-table .custom-check label input[type=checkbox]+em::before {
+	font-size: 17px;
+}
+
+.primary-table thead tr th {
+	padding: 15px 8px;
+	background-color: var(--snow);
+	text-align: center;
+}
+
+.primary-table tbody tr {
+	border-bottom: 1px solid var(--snow);
+}
+
+.primary-table tbody tr td {
+	padding: 13px 8px;
+	background-color: #fff;
+}
+
+.primary-table .title {
+	position: relative;
+	/* font-weight: 500; */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.primary-table .title.new:after {
+	content: 'N';
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-color: var(--blue);
+	position: absolute;
+	right: -30px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	border-radius: 5px;
+	font-size: 11px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Page CSS */
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 18px;
+	margin: 30px 0;
+}
+
+.page .prev,
+.page .next {
+	background-color: #E8E8F5;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 17px;
+}
+
+.page a.active {
+	font-weight: bold;
+}
+
+/* Detail Table CSS */
+.detail-table {
+	text-align: left;
+	width: 99%;
+	margin: 30px auto;
+}
+
+.detail-table tbody tr {
+	border-bottom: 1px solid var(--gloudy);
+}
+
+.detail-table tbody tr th {
+	padding: 12px;
+	background-color: var(--snow);
+	text-align: center;
+	width: 15%;
+}
+
+.detail-table tbody tr td {
+	padding: 10px 20px;
+	width: 85%;
+}
+
+.detail-table input[type=text] {
+	width: 100%;
+	border: none;
+	padding: 8px;
+	border: 1px solid var(--gloudy);
+	border-radius: 5px;
+	transition: 0.35s;
+}
+
+.detail-table input[type=text]:focus {
+	border: 1px solid var(--blue);
+}
+
+/* Detali 첨부파일 다운로드 CSS */
+.file-list a {
+	position: relative;
+}
+
+.file-list a:after {
+	content: '\F30A';
+	font-family: bootstrap-icons;
+	display: inline-block;
+	position: absolute;
+	right: -25px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--blue);
+}
+
+/* Detail Editor CSS */
+.editor {
+	padding: 20px 0;
+}
+
+/* Btn Area CSS */
+.btn-area {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 5px;
+}
+
+.btn-area>* {
+	background-color: var(--blue);
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-left: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.btn-area>*>i {
+	color: #fff;
+	font-size: 18px;
+}
+
+.btn-area button.btn-list>i {
+	font-size: 20px;
+}
+
+/* 첨부파일 CSS */
+.file-upload {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+}
+
+input[type=file] {
+	display: none;
+}
+
+label[for=file] {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: var(--blue);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+label[for=file] i {
+	color: #fff;
+	font-size: 19px;
+}
+
+.upload-file {
+	display: flex;
+	gap: 10px;
+}
+
+.upload-file div {
+	display: flex;
+	gap: 2px;
+}
+
+.upload-file div span {
+	font-size: 15px;
+	color: var(--dark-gray);
+}
+
+.btn-delete-file {
+	color: var(--dark-gray);
+}
