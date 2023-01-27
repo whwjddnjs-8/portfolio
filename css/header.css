@@ -44,11 +44,11 @@ header {
 }
 
 .gnb a.active {
-	color: var(--dark-blue);
+	color: var(--dark-pink);
 }
 
 .gnb a:hover {
-	color: var(--dark-blue);
+	color: var(--dark-pink);
 }
 
 /* #### Mobile Hamburger Button CSS #### */

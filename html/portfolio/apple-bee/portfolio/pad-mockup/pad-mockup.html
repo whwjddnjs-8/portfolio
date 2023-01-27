@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>카카오 기술 - 패드</title>
+  <link rel="stylesheet" href="./pad-mockup.css">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+  <button class="btn-rotate-pad">
+    <i class="bi bi-arrow-repeat"></i>
+  </button>
+  <div class="mockup-container">
+    <div class="mockup mockup-width">
+      <div class="mobile-mockup">
+        <div class="volume">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="power">
+          <span></span>
+        </div>
+        <!-- Content Start -->
+        <div class="iframe-url">
+          <iframe class="scroll-panel" src="../../index.html" frameborder="0"></iframe>
+        </div>
+        <!-- Content End -->
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+      $('.btn-rotate-pad').click(function () {
+        $('body').toggleClass('h140vh')
+        $('.mobile-mockup').toggleClass('active')
+        $('.iframe-url').toggleClass('length')
+      })
+    })
+  </script>
+</body>
+
+</html>

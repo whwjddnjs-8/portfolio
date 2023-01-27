@@ -1,7 +1,9 @@
+@import url(/css/featherlight.css);
 @import url(/css/reset.css);
 @import url(/css/variables.css);
 @import url(/css/common.css);
 @import url(/css/header.css);
+
 
 * {
 	font-family: var(--primary-kr);
@@ -100,15 +102,14 @@ circle:nth-of-type(4) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 20px;
 }
 
-.introduce h1 {
+.home-inner h1 {
 	font-size: 40px;
 	line-height: 1.5em;
 }
 
-.introduce h1 span {
+.home-inner h1 span {
 	margin-top: 10px;
 	font-weight: bold;
 	position: relative;
@@ -119,7 +120,7 @@ circle:nth-of-type(4) {
 	overflow: hidden;
 }
 
-.introduce h1 span:after {
+.home-inner h1 span:after {
 	content: '조정원';
 	position: absolute;
 	bottom: -100%;
@@ -141,27 +142,10 @@ circle:nth-of-type(4) {
 	}
 }
 
-.introduce b {
-	font-weight: bold;
-	font-size: 35px;
-	margin: 0 10px;
-}
-
-.btn-show-portfolio {
-	transition: 0.35s;
-	background-color: #fff;
-}
-
-.btn-show-portfolio:hover {
-	background-color: var(--primary-color);
-	color: #fff;
-}
-
 .scroll-bar {
 	position: absolute;
 	bottom: 40px;
 	animation: scroll-mouse 3s linear infinite;
-
 }
 
 .scroll-bar img {
@@ -188,49 +172,11 @@ circle:nth-of-type(4) {
 	.home-inner {
 		width: 90%;
 	}
-
-	.introduce {
-		width: 50%;
-		font-size: 23px;
-	}
-
-	.introduce span {
-		font-size: 17px;
-	}
-
-	.introduce b {
-		font-size: 27px;
-	}
-
-	.animate-img {
-		display: none;
-	}
 }
 
 @media (max-width : 480px) {
 	.home-inner {
 		width: 90%;
-		background: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.introduce {
-		width: 350px;
-		font-size: 23px;
-	}
-
-	.introduce span {
-		font-size: 17px;
-	}
-
-	.introduce b {
-		font-size: 27px;
-	}
-
-	.animate-img {
-		display: none;
 	}
 }
 
@@ -263,8 +209,42 @@ circle:nth-of-type(4) {
 	flex: 2;
 }
 
+.about-information .introduce {
+	padding: 0 30px;
+	margin-bottom: 20px;
+	line-height: 1.6em;
+	position: relative;
+}
+
+.about-information .introduce span {
+	display: inline-block;
+	background-color: var(--light-pink);
+}
+
+.about-information .introduce:before,
+.about-information .introduce:after {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	top: -50px;
+	z-index: 1000;
+}
+
+.about-information .introduce:before {
+	left: -40px;
+	background: url(../images/quote.png) no-repeat;
+	background-size: cover;
+}
+
+.about-information .introduce:after {
+	right: -40px;
+	background: url(../images/double-quotes.png) no-repeat;
+	background-size: cover;
+}
+
 .about-info {
-	/* flex: 2; */
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
@@ -276,14 +256,14 @@ circle:nth-of-type(4) {
 
 .personal-info h3,
 .growth-info h3 {
-	font-size: 24px;
+	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
 ul.about-list li {
 	padding-bottom: 13px;
-	font-size: 16px;
+	font-size: 15px;
 	position: relative;
 }
 
@@ -339,6 +319,10 @@ ul.about-list li span {
 		object-fit: cover;
 	}
 
+	.about-information .introduce {
+		margin: 70px 0;
+	}
+
 	.personal-info h3,
 	.growth-info h3,
 	.certificate-info h3 {
@@ -386,6 +370,10 @@ ul.about-list li span {
 		object-fit: cover;
 	}
 
+	.about-information .introduce {
+		margin: 70px 0;
+	}
+
 	.about-info {
 		display: block;
 
@@ -423,7 +411,7 @@ ul.about-list li span {
 
 /* #### Skill CSS #### */
 .skill {
-	background-color: #fffafa;
+	background-color: #faf8f8;
 }
 
 .skill-inner {
@@ -917,7 +905,7 @@ ul.about-list li span {
 
 /* #### Coding CSS #### */
 .coding {
-	background-color: #fffafa;
+	background-color: #faf8f8;
 }
 
 .coding-inner {
@@ -936,7 +924,7 @@ input[id=coding-tab2]:checked~.coding-tab-buttons label[for=coding-tab2],
 input[id=coding-tab3]:checked~.coding-tab-buttons label[for=coding-tab3],
 input[id=coding-tab4]:checked~.coding-tab-buttons label[for=coding-tab4],
 input[id=coding-tab5]:checked~.coding-tab-buttons label[for=coding-tab5] {
-	color: var(--dark-blue);
+	color: var(--dark-pink);
 }
 
 input[id=coding-tab1]:checked~.coding-tab-buttons label[for=coding-tab1]:after,
@@ -981,7 +969,7 @@ input[id=coding-tab5]:checked~.coding-tabs .coding-tab5 {
 	height: 2px;
 	bottom: -5px;
 	left: 0;
-	background-color: var(--dark-blue);
+	background-color: var(--dark-pink);
 	transition: 0.35s;
 }
 
