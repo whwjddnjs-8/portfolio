@@ -23,4 +23,10 @@
 	color: #555 !important;
 	border-radius: 20px !important;
 	border: 2px solid #f1bcbc !important;
+	transition: 0.35s;
+}
+
+.featherlight .featherlight-close-icon:hover {
+	background-color: #f1bcbc !important;
+	color: #fff !important;
 }

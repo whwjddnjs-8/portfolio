@@ -184,116 +184,59 @@ section {
 	width: 100%;
 }
 
-/* .clone-coding-title {
-	text-align: center;
+.ui-design {
+	width: 1200px;
+	margin: 0 auto;
+	font-family: var(--secondary-en);
+	font-weight: normal;
+	padding: 30px 0;
 }
 
-.clone-coding-title h1 {
-	font-weight: bold;
+.ui-design-items {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: space-around;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
-.main-img {
+.ui-thum {
 	width: 100%;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	height: fit-content;
+	margin: 0 auto;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.main-img img {
+.ui-thum img {
 	width: inherit;
+	height: inherit;
+	object-fit: cover;
 	vertical-align: top;
 }
 
-.clone-coding-desc {
-	padding: 25px 0;
-	margin-top: 25px;
-	border-top: 2px solid var(--gloudy);
-	border-bottom: 2px solid var(--gloudy);
+.ui-design-item {
+	width: 30%;
+	text-align: center;
 }
 
-.clone-coding-desc h2 {
-	font-weight: 500;
-}
-
-.clone-coding-desc h2 b {
-	color: var(--primary-color);
-	font-weight: bold;
-}
-
-.clone-coding-project-desc {
-	margin-bottom: 20px;
-	padding: 20px;
-	border: 1px solid var(--gloudy);
-}
-
-.clone-coding-project-desc li {
-	font-size: 17px;
-	margin-bottom: 5px;
-}
-
-.clone-coding-project-desc li span {
-	font-weight: 500;
-	margin-right: 5px;
-	color: var(--dark-gray);
+.ui-design-item h3 {
+	position: relative;
+	padding-left: 25px;
 	display: inline-block;
-	width: 80px;
+	font-weight: 500;
+	font-family: var(--logo-kr);
 }
 
-.work-process {
-	width: 100%;
-	margin-top: 80px;
+.ui-design-item h3:before {
+	content: '\F309';
+	font-family: bootstrap-icons;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	color: var(--green);
+	font-size: 25px;
 }
-
-.work-process .process {
-	margin: 30px 0;
-}
-
-.work-process h1 {
-	font-weight: bold;
-}
-
-.work-process h1 i {
-	margin-right: 10px;
-}
-
-.work-process img {
-	width: 100%;
-} */
-
-/* #### Responsive CSS #### */
-/* @media (max-width : 480px) {
-	.container {
-		width: 90%;
-	}
-
-	.clone-coding-title h1 {
-		font-size: 20px;
-		margin-bottom: 20px;
-	}
-
-	.clone-coding-desc h2 {
-		font-size: 18px;
-	}
-
-	.clone-coding-desc p {
-		font-size: 14px;
-		line-height: 1.4em;
-	}
-
-	.clone-coding-project-desc {
-		margin-bottom: 10px;
-		padding: 10px;
-	}
-
-	.clone-coding-project-desc li {
-		font-size: 14px;
-		margin-bottom: 3px;
-	}
-
-	.work-process {
-		margin-top: 20px;
-	}
-
-	.work-process h1 {
-		font-size: 20px;
-	}
-
-} */
